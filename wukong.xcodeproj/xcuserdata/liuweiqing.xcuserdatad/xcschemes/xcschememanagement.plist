@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>wukong copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>wukong.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>88A9B8A31CAA835300B39268</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88EB1D631CABEA5B0016D2EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

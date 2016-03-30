@@ -1,0 +1,22 @@
+//
+//  wukong-prefix.pch
+//  wukong
+//
+//  Created by liuweiqing on 16/3/30.
+//  Copyright © 2016年 RT. All rights reserved.
+//
+
+#ifndef wukong_prefix_pch
+#define wukong_prefix_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+
+#define SERVER_URL @"http://www.baidu.com"
+#define API_VERSION @"0.1"
+
+
+#endif /* wukong_prefix_pch */
