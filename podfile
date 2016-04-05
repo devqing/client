@@ -1,4 +1,2 @@
 platform :ios, '7.0'
 pod 'AFNetworking', '~> 2.6.3'
-pod 'RongCloudIMKit', '2.4.10'
-pod 'SDWebImage', '~> 3.7.5'

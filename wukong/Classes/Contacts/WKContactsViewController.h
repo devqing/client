@@ -1,5 +1,5 @@
 //
-//  ChatViewController.h
+//  ContactsViewController.h
 //  wukong
 //
 //  Created by liuweiqing on 16/4/1.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatViewController : UIViewController
+@interface WKContactsViewController : UIViewController
 
 @end

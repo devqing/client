@@ -8,11 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7CEDDE2C8734DB2834515AE7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 568A03AAD14EB0477823973C /* libPods.a */; };
+		88187B871CAEBDE200A2E7D6 /* WKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B861CAEBDE200A2E7D6 /* WKMineViewController.m */; };
+		88187B881CAEBDE200A2E7D6 /* WKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B861CAEBDE200A2E7D6 /* WKMineViewController.m */; };
+		88187B8B1CAEBDF500A2E7D6 /* WKFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B8A1CAEBDF500A2E7D6 /* WKFindViewController.m */; };
+		88187B8C1CAEBDF500A2E7D6 /* WKFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B8A1CAEBDF500A2E7D6 /* WKFindViewController.m */; };
+		88187B901CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B8F1CAEBECE00A2E7D6 /* WKContactsViewController.m */; };
+		88187B911CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B8F1CAEBECE00A2E7D6 /* WKContactsViewController.m */; };
 		88A9B8851CAA835300B39268 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A9B8841CAA835300B39268 /* main.m */; };
 		88A9B8881CAA835300B39268 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A9B8871CAA835300B39268 /* AppDelegate.m */; };
 		88A9B8901CAA835300B39268 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A9B88F1CAA835300B39268 /* Images.xcassets */; };
-		88CE0B811CAE3DB1002CDEA8 /* WKNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CE0B801CAE3DB1002CDEA8 /* WKNavigationViewController.m */; };
-		88CE0B821CAE3DB1002CDEA8 /* WKNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CE0B801CAE3DB1002CDEA8 /* WKNavigationViewController.m */; };
+		88B9C84F1CAEC45F00D6B8A2 /* WKNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C84A1CAEC45F00D6B8A2 /* WKNavigationViewController.m */; };
+		88B9C8501CAEC45F00D6B8A2 /* WKNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C84A1CAEC45F00D6B8A2 /* WKNavigationViewController.m */; };
+		88B9C8511CAEC45F00D6B8A2 /* WKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C84C1CAEC45F00D6B8A2 /* WKTabBarViewController.m */; };
+		88B9C8521CAEC45F00D6B8A2 /* WKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C84C1CAEC45F00D6B8A2 /* WKTabBarViewController.m */; };
+		88B9C8551CAEC48200D6B8A2 /* WKTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C8541CAEC48200D6B8A2 /* WKTabbarView.m */; };
+		88B9C8561CAEC48200D6B8A2 /* WKTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C8541CAEC48200D6B8A2 /* WKTabbarView.m */; };
+		88B9C8591CAEC59B00D6B8A2 /* WKTabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C8581CAEC59B00D6B8A2 /* WKTabButton.m */; };
+		88B9C85A1CAEC59B00D6B8A2 /* WKTabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B9C8581CAEC59B00D6B8A2 /* WKTabButton.m */; };
 		88CE0B841CAE3F7A002CDEA8 /* NavBar64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88CE0B831CAE3F7A002CDEA8 /* NavBar64@2x.png */; };
 		88CE0B851CAE3F7A002CDEA8 /* NavBar64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88CE0B831CAE3F7A002CDEA8 /* NavBar64@2x.png */; };
 		88EB1D381CABE9460016D2EF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EB1D371CABE9460016D2EF /* AssetsLibrary.framework */; };
@@ -195,8 +207,6 @@
 		88EB1E9B1CABEEAB0016D2EF /* AIFServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1E171CABEEAB0016D2EF /* AIFServiceFactory.m */; };
 		88EB1E9C1CABEEAB0016D2EF /* AIFServiceShark.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1E191CABEEAB0016D2EF /* AIFServiceShark.m */; };
 		88EB1E9D1CABEEAB0016D2EF /* AIFServiceShark.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1E191CABEEAB0016D2EF /* AIFServiceShark.m */; };
-		88EB1EA11CACF0690016D2EF /* WKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1EA01CACF0690016D2EF /* WKTabBarViewController.m */; };
-		88EB1EA21CACF0690016D2EF /* WKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1EA01CACF0690016D2EF /* WKTabBarViewController.m */; };
 		88EB1EB81CACF21E0016D2EF /* tabbar_badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EA51CACF21E0016D2EF /* tabbar_badge@2x.png */; };
 		88EB1EB91CACF21E0016D2EF /* tabbar_badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EA51CACF21E0016D2EF /* tabbar_badge@2x.png */; };
 		88EB1EBA1CACF21E0016D2EF /* tabbar_badge@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EA61CACF21E0016D2EF /* tabbar_badge@3x.png */; };
@@ -235,8 +245,8 @@
 		88EB1EDB1CACF21E0016D2EF /* tabbar_meHL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EB61CACF21E0016D2EF /* tabbar_meHL@3x.png */; };
 		88EB1EDC1CACF21E0016D2EF /* tabbarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EB71CACF21E0016D2EF /* tabbarBkg@2x.png */; };
 		88EB1EDD1CACF21E0016D2EF /* tabbarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EB71CACF21E0016D2EF /* tabbarBkg@2x.png */; };
-		88EB1EE11CAE17F90016D2EF /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1EE01CAE17F90016D2EF /* ChatViewController.m */; };
-		88EB1EE21CAE17F90016D2EF /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1EE01CAE17F90016D2EF /* ChatViewController.m */; };
+		88EB1EE11CAE17F90016D2EF /* WKChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1EE01CAE17F90016D2EF /* WKChatViewController.m */; };
+		88EB1EE21CAE17F90016D2EF /* WKChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EB1EE01CAE17F90016D2EF /* WKChatViewController.m */; };
 		88EB1EE41CAE18650016D2EF /* ShakeCardHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EE31CAE18650016D2EF /* ShakeCardHL@2x.png */; };
 		88EB1EE51CAE18650016D2EF /* ShakeCardHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EB1EE31CAE18650016D2EF /* ShakeCardHL@2x.png */; };
 /* End PBXBuildFile section */
@@ -244,6 +254,12 @@
 /* Begin PBXFileReference section */
 		3AFE5E2AC983A45B5B4825A1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		568A03AAD14EB0477823973C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		88187B851CAEBDE200A2E7D6 /* WKMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKMineViewController.h; sourceTree = "<group>"; };
+		88187B861CAEBDE200A2E7D6 /* WKMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKMineViewController.m; sourceTree = "<group>"; };
+		88187B891CAEBDF500A2E7D6 /* WKFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKFindViewController.h; sourceTree = "<group>"; };
+		88187B8A1CAEBDF500A2E7D6 /* WKFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKFindViewController.m; sourceTree = "<group>"; };
+		88187B8E1CAEBECE00A2E7D6 /* WKContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKContactsViewController.h; sourceTree = "<group>"; };
+		88187B8F1CAEBECE00A2E7D6 /* WKContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKContactsViewController.m; sourceTree = "<group>"; };
 		88A9B8801CAA835300B39268 /* wukong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wukong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A9B8841CAA835300B39268 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A9B8861CAA835300B39268 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -254,8 +270,14 @@
 		88A9B89F1CAA835300B39268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A9B8A81CAA835300B39268 /* wukongUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wukongUITests.m; sourceTree = "<group>"; };
 		88A9B8AA1CAA835300B39268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88CE0B7F1CAE3DB1002CDEA8 /* WKNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKNavigationViewController.h; sourceTree = "<group>"; };
-		88CE0B801CAE3DB1002CDEA8 /* WKNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKNavigationViewController.m; sourceTree = "<group>"; };
+		88B9C8491CAEC45F00D6B8A2 /* WKNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKNavigationViewController.h; sourceTree = "<group>"; };
+		88B9C84A1CAEC45F00D6B8A2 /* WKNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKNavigationViewController.m; sourceTree = "<group>"; };
+		88B9C84B1CAEC45F00D6B8A2 /* WKTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTabBarViewController.h; sourceTree = "<group>"; };
+		88B9C84C1CAEC45F00D6B8A2 /* WKTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTabBarViewController.m; sourceTree = "<group>"; };
+		88B9C8531CAEC48200D6B8A2 /* WKTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTabbarView.h; sourceTree = "<group>"; };
+		88B9C8541CAEC48200D6B8A2 /* WKTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTabbarView.m; sourceTree = "<group>"; };
+		88B9C8571CAEC59B00D6B8A2 /* WKTabButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTabButton.h; sourceTree = "<group>"; };
+		88B9C8581CAEC59B00D6B8A2 /* WKTabButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTabButton.m; sourceTree = "<group>"; };
 		88CE0B831CAE3F7A002CDEA8 /* NavBar64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar64@2x.png"; sourceTree = "<group>"; };
 		88EB1D371CABE9460016D2EF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		88EB1D391CABE9560016D2EF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -415,8 +437,6 @@
 		88EB1E171CABEEAB0016D2EF /* AIFServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIFServiceFactory.m; sourceTree = "<group>"; };
 		88EB1E181CABEEAB0016D2EF /* AIFServiceShark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIFServiceShark.h; sourceTree = "<group>"; };
 		88EB1E191CABEEAB0016D2EF /* AIFServiceShark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIFServiceShark.m; sourceTree = "<group>"; };
-		88EB1E9F1CACF0690016D2EF /* WKTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTabBarViewController.h; sourceTree = "<group>"; };
-		88EB1EA01CACF0690016D2EF /* WKTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTabBarViewController.m; sourceTree = "<group>"; };
 		88EB1EA51CACF21E0016D2EF /* tabbar_badge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_badge@2x.png"; sourceTree = "<group>"; };
 		88EB1EA61CACF21E0016D2EF /* tabbar_badge@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_badge@3x.png"; sourceTree = "<group>"; };
 		88EB1EA71CACF21E0016D2EF /* tabbar_contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_contacts@2x.png"; sourceTree = "<group>"; };
@@ -436,8 +456,8 @@
 		88EB1EB51CACF21E0016D2EF /* tabbar_meHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_meHL@2x.png"; sourceTree = "<group>"; };
 		88EB1EB61CACF21E0016D2EF /* tabbar_meHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_meHL@3x.png"; sourceTree = "<group>"; };
 		88EB1EB71CACF21E0016D2EF /* tabbarBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBkg@2x.png"; sourceTree = "<group>"; };
-		88EB1EDF1CAE17F90016D2EF /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
-		88EB1EE01CAE17F90016D2EF /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		88EB1EDF1CAE17F90016D2EF /* WKChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKChatViewController.h; sourceTree = "<group>"; };
+		88EB1EE01CAE17F90016D2EF /* WKChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKChatViewController.m; sourceTree = "<group>"; };
 		88EB1EE31CAE18650016D2EF /* ShakeCardHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShakeCardHL@2x.png"; sourceTree = "<group>"; };
 		E38AEC4A067CEB999EFF0F0C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -506,6 +526,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88187B831CAEBDB600A2E7D6 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				88187B891CAEBDF500A2E7D6 /* WKFindViewController.h */,
+				88187B8A1CAEBDF500A2E7D6 /* WKFindViewController.m */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		88187B841CAEBDBD00A2E7D6 /* MIne */ = {
+			isa = PBXGroup;
+			children = (
+				88187B851CAEBDE200A2E7D6 /* WKMineViewController.h */,
+				88187B861CAEBDE200A2E7D6 /* WKMineViewController.m */,
+			);
+			path = MIne;
+			sourceTree = "<group>";
+		};
+		88187B8D1CAEBEBB00A2E7D6 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				88187B8E1CAEBECE00A2E7D6 /* WKContactsViewController.h */,
+				88187B8F1CAEBECE00A2E7D6 /* WKContactsViewController.m */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
 		88A9B8771CAA835300B39268 = {
 			isa = PBXGroup;
 			children = (
@@ -572,10 +619,42 @@
 		88A9B8B61CAA852100B39268 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				88187B8D1CAEBEBB00A2E7D6 /* Contacts */,
+				88187B841CAEBDBD00A2E7D6 /* MIne */,
+				88187B831CAEBDB600A2E7D6 /* Find */,
 				88EB1EDE1CAE17D70016D2EF /* Chat */,
 				88EB1E9E1CACEFE70016D2EF /* Base */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		88B9C8481CAEC45F00D6B8A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88B9C8491CAEC45F00D6B8A2 /* WKNavigationViewController.h */,
+				88B9C84A1CAEC45F00D6B8A2 /* WKNavigationViewController.m */,
+				88B9C84B1CAEC45F00D6B8A2 /* WKTabBarViewController.h */,
+				88B9C84C1CAEC45F00D6B8A2 /* WKTabBarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88B9C84D1CAEC45F00D6B8A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88B9C84E1CAEC45F00D6B8A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88B9C8531CAEC48200D6B8A2 /* WKTabbarView.h */,
+				88B9C8541CAEC48200D6B8A2 /* WKTabbarView.m */,
+				88B9C8571CAEC59B00D6B8A2 /* WKTabButton.h */,
+				88B9C8581CAEC59B00D6B8A2 /* WKTabButton.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		88EB1D8A1CABEEAB0016D2EF /* Network */ = {
@@ -794,10 +873,9 @@
 		88EB1E9E1CACEFE70016D2EF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				88EB1E9F1CACF0690016D2EF /* WKTabBarViewController.h */,
-				88EB1EA01CACF0690016D2EF /* WKTabBarViewController.m */,
-				88CE0B7F1CAE3DB1002CDEA8 /* WKNavigationViewController.h */,
-				88CE0B801CAE3DB1002CDEA8 /* WKNavigationViewController.m */,
+				88B9C8481CAEC45F00D6B8A2 /* Controller */,
+				88B9C84D1CAEC45F00D6B8A2 /* Model */,
+				88B9C84E1CAEC45F00D6B8A2 /* View */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -841,8 +919,8 @@
 		88EB1EDE1CAE17D70016D2EF /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				88EB1EDF1CAE17F90016D2EF /* ChatViewController.h */,
-				88EB1EE01CAE17F90016D2EF /* ChatViewController.m */,
+				88EB1EDF1CAE17F90016D2EF /* WKChatViewController.h */,
+				88EB1EE01CAE17F90016D2EF /* WKChatViewController.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -898,6 +976,7 @@
 				88A9B87D1CAA835300B39268 /* Frameworks */,
 				88A9B87E1CAA835300B39268 /* Resources */,
 				3B5E20DDBBE2DE166AD6E49C /* Copy Pods Resources */,
+				C35B97332ACFB35208F93C60 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -938,6 +1017,7 @@
 				TargetAttributes = {
 					88A9B87F1CAA835300B39268 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2M259QAYES;
 					};
 				};
 			};
@@ -1082,6 +1162,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		C35B97332ACFB35208F93C60 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1091,24 +1186,25 @@
 			files = (
 				88EB1E921CABEEAB0016D2EF /* AIFAPPContext.m in Sources */,
 				88EB1E341CABEEAB0016D2EF /* SharkApiCheckNonobankManager.m in Sources */,
-				88EB1EA11CACF0690016D2EF /* WKTabBarViewController.m in Sources */,
 				88EB1E2C1CABEEAB0016D2EF /* NSString+AIFNetworkingMethods.m in Sources */,
 				88EB1E6E1CABEEAB0016D2EF /* SharkApiNotificationCenterManager.m in Sources */,
 				88EB1E7A1CABEEAB0016D2EF /* SharkApiSearchGoodsManager.m in Sources */,
+				88B9C8551CAEC48200D6B8A2 /* WKTabbarView.m in Sources */,
 				88EB1E541CABEEAB0016D2EF /* SharkApiGetOrderPrizeManager.m in Sources */,
 				88EB1E421CABEEAB0016D2EF /* SharkApiGetCityManager.m in Sources */,
 				88EB1E201CABEEAB0016D2EF /* AIFUDIDGenerator.m in Sources */,
 				88EB1E4A1CABEEAB0016D2EF /* SharkApiGetGoodsTypesManager.m in Sources */,
 				88EB1E1C1CABEEAB0016D2EF /* AIFRequestGenerator.m in Sources */,
 				88EB1E5A1CABEEAB0016D2EF /* SharkApiGetProvinceManager.m in Sources */,
-				88EB1EE11CAE17F90016D2EF /* ChatViewController.m in Sources */,
+				88EB1EE11CAE17F90016D2EF /* WKChatViewController.m in Sources */,
+				88187B901CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */,
 				88EB1E1E1CABEEAB0016D2EF /* AIFSignatureGenerator.m in Sources */,
 				88EB1E441CABEEAB0016D2EF /* SharkApiGetcountyManager.m in Sources */,
 				88EB1E2E1CABEEAB0016D2EF /* NSURLRequest+AIFNetworkingMethods.m in Sources */,
-				88CE0B811CAE3DB1002CDEA8 /* WKNavigationViewController.m in Sources */,
 				88EB1E5E1CABEEAB0016D2EF /* SharkApiGetShopInfoManager.m in Sources */,
 				88EB1E7E1CABEEAB0016D2EF /* SharkApiSignUpSMSManager.m in Sources */,
 				88EB1E4C1CABEEAB0016D2EF /* SharkApiGetNonobankCreditManager.m in Sources */,
+				88187B8B1CAEBDF500A2E7D6 /* WKFindViewController.m in Sources */,
 				88EB1E6A1CABEEAB0016D2EF /* SharkApiModifyAddressManager.m in Sources */,
 				88EB1E661CABEEAB0016D2EF /* SharkApiLoginOutManager.m in Sources */,
 				88EB1E961CABEEAB0016D2EF /* AIFLoggerConfiguration.m in Sources */,
@@ -1125,9 +1221,11 @@
 				88EB1E461CABEEAB0016D2EF /* SharkApiGetGoodsInfoManager.m in Sources */,
 				88EB1E901CABEEAB0016D2EF /* AIFCacheObject.m in Sources */,
 				88EB1E601CABEEAB0016D2EF /* SharkApiGetShopListManager.m in Sources */,
+				88B9C8591CAEC59B00D6B8A2 /* WKTabButton.m in Sources */,
 				88EB1E581CABEEAB0016D2EF /* SharkApiGetPreorderSchedulesManager.m in Sources */,
 				88EB1E361CABEEAB0016D2EF /* SharkApiCreatAddressManager.m in Sources */,
 				88EB1E841CABEEAB0016D2EF /* SharkApiSubmitSuggestManager.m in Sources */,
+				88187B871CAEBDE200A2E7D6 /* WKMineViewController.m in Sources */,
 				88EB1E381CABEEAB0016D2EF /* SharkApiDeleteAddressManager.m in Sources */,
 				88EB1E6C1CABEEAB0016D2EF /* SharkApiNonobankPaymentManager.m in Sources */,
 				88EB1E1A1CABEEAB0016D2EF /* AIFCommonParamsGenerator.m in Sources */,
@@ -1154,9 +1252,11 @@
 				88EB1E9A1CABEEAB0016D2EF /* AIFServiceFactory.m in Sources */,
 				88A9B8851CAA835300B39268 /* main.m in Sources */,
 				88EB1E241CABEEAB0016D2EF /* NSArray+AIFNetworkingMethods.m in Sources */,
+				88B9C84F1CAEC45F00D6B8A2 /* WKNavigationViewController.m in Sources */,
 				88EB1E301CABEEAB0016D2EF /* UIDevice+IdentifierAddition.m in Sources */,
 				88EB1E4E1CABEEAB0016D2EF /* SharkApiGetNotificationListManager.m in Sources */,
 				88EB1E5C1CABEEAB0016D2EF /* SharkApiGetRedPacketListManager.m in Sources */,
+				88B9C8511CAEC45F00D6B8A2 /* WKTabBarViewController.m in Sources */,
 				88EB1E521CABEEAB0016D2EF /* SharkApiGetOrderListManager.m in Sources */,
 				88EB1E481CABEEAB0016D2EF /* SharkApiGetGoodsListManager.m in Sources */,
 				88EB1E721CABEEAB0016D2EF /* SharkApiPresubmitOrderManager.m in Sources */,
@@ -1169,24 +1269,25 @@
 			files = (
 				88EB1E931CABEEAB0016D2EF /* AIFAPPContext.m in Sources */,
 				88EB1E351CABEEAB0016D2EF /* SharkApiCheckNonobankManager.m in Sources */,
-				88EB1EA21CACF0690016D2EF /* WKTabBarViewController.m in Sources */,
 				88EB1E2D1CABEEAB0016D2EF /* NSString+AIFNetworkingMethods.m in Sources */,
 				88EB1E6F1CABEEAB0016D2EF /* SharkApiNotificationCenterManager.m in Sources */,
 				88EB1E7B1CABEEAB0016D2EF /* SharkApiSearchGoodsManager.m in Sources */,
+				88B9C8561CAEC48200D6B8A2 /* WKTabbarView.m in Sources */,
 				88EB1E551CABEEAB0016D2EF /* SharkApiGetOrderPrizeManager.m in Sources */,
 				88EB1E431CABEEAB0016D2EF /* SharkApiGetCityManager.m in Sources */,
 				88EB1E211CABEEAB0016D2EF /* AIFUDIDGenerator.m in Sources */,
 				88EB1E4B1CABEEAB0016D2EF /* SharkApiGetGoodsTypesManager.m in Sources */,
 				88EB1E1D1CABEEAB0016D2EF /* AIFRequestGenerator.m in Sources */,
 				88EB1E5B1CABEEAB0016D2EF /* SharkApiGetProvinceManager.m in Sources */,
-				88EB1EE21CAE17F90016D2EF /* ChatViewController.m in Sources */,
+				88EB1EE21CAE17F90016D2EF /* WKChatViewController.m in Sources */,
+				88187B911CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */,
 				88EB1E1F1CABEEAB0016D2EF /* AIFSignatureGenerator.m in Sources */,
 				88EB1E451CABEEAB0016D2EF /* SharkApiGetcountyManager.m in Sources */,
 				88EB1E2F1CABEEAB0016D2EF /* NSURLRequest+AIFNetworkingMethods.m in Sources */,
-				88CE0B821CAE3DB1002CDEA8 /* WKNavigationViewController.m in Sources */,
 				88EB1E5F1CABEEAB0016D2EF /* SharkApiGetShopInfoManager.m in Sources */,
 				88EB1E7F1CABEEAB0016D2EF /* SharkApiSignUpSMSManager.m in Sources */,
 				88EB1E4D1CABEEAB0016D2EF /* SharkApiGetNonobankCreditManager.m in Sources */,
+				88187B8C1CAEBDF500A2E7D6 /* WKFindViewController.m in Sources */,
 				88EB1E6B1CABEEAB0016D2EF /* SharkApiModifyAddressManager.m in Sources */,
 				88EB1E671CABEEAB0016D2EF /* SharkApiLoginOutManager.m in Sources */,
 				88EB1E971CABEEAB0016D2EF /* AIFLoggerConfiguration.m in Sources */,
@@ -1203,9 +1304,11 @@
 				88EB1E471CABEEAB0016D2EF /* SharkApiGetGoodsInfoManager.m in Sources */,
 				88EB1E911CABEEAB0016D2EF /* AIFCacheObject.m in Sources */,
 				88EB1E611CABEEAB0016D2EF /* SharkApiGetShopListManager.m in Sources */,
+				88B9C85A1CAEC59B00D6B8A2 /* WKTabButton.m in Sources */,
 				88EB1E591CABEEAB0016D2EF /* SharkApiGetPreorderSchedulesManager.m in Sources */,
 				88EB1E371CABEEAB0016D2EF /* SharkApiCreatAddressManager.m in Sources */,
 				88EB1E851CABEEAB0016D2EF /* SharkApiSubmitSuggestManager.m in Sources */,
+				88187B881CAEBDE200A2E7D6 /* WKMineViewController.m in Sources */,
 				88EB1E391CABEEAB0016D2EF /* SharkApiDeleteAddressManager.m in Sources */,
 				88EB1E6D1CABEEAB0016D2EF /* SharkApiNonobankPaymentManager.m in Sources */,
 				88EB1E1B1CABEEAB0016D2EF /* AIFCommonParamsGenerator.m in Sources */,
@@ -1232,9 +1335,11 @@
 				88EB1E9B1CABEEAB0016D2EF /* AIFServiceFactory.m in Sources */,
 				88EB1D681CABEA5B0016D2EF /* main.m in Sources */,
 				88EB1E251CABEEAB0016D2EF /* NSArray+AIFNetworkingMethods.m in Sources */,
+				88B9C8501CAEC45F00D6B8A2 /* WKNavigationViewController.m in Sources */,
 				88EB1E311CABEEAB0016D2EF /* UIDevice+IdentifierAddition.m in Sources */,
 				88EB1E4F1CABEEAB0016D2EF /* SharkApiGetNotificationListManager.m in Sources */,
 				88EB1E5D1CABEEAB0016D2EF /* SharkApiGetRedPacketListManager.m in Sources */,
+				88B9C8521CAEC45F00D6B8A2 /* WKTabBarViewController.m in Sources */,
 				88EB1E531CABEEAB0016D2EF /* SharkApiGetOrderListManager.m in Sources */,
 				88EB1E491CABEEAB0016D2EF /* SharkApiGetGoodsListManager.m in Sources */,
 				88EB1E731CABEEAB0016D2EF /* SharkApiPresubmitOrderManager.m in Sources */,
@@ -1330,6 +1435,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wukong/wukong-prefix.pch";
@@ -1338,6 +1445,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RT.wukong;
 				PRODUCT_NAME = wukong;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1347,6 +1455,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wukong/wukong-prefix.pch";
@@ -1355,6 +1465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RT.wukong;
 				PRODUCT_NAME = wukong;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

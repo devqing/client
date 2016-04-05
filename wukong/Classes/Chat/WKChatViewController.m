@@ -6,13 +6,13 @@
 //  Copyright © 2016年 RT. All rights reserved.
 //
 
-#import "ChatViewController.h"
+#import "WKChatViewController.h"
 #define kSCNavBarImageTag 10
-@interface ChatViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface WKChatViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
-@implementation ChatViewController
+@implementation WKChatViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

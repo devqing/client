@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import <RongIMKit/RongIMKit.h>
-#import <RongIMLib/RongIMLib.h>
-#import "ChatViewController.h"
-#import "WKNavigationViewController.h"
+//#import <RongIMKit/RongIMKit.h>
+//#import <RongIMLib/RongIMLib.h>
+#import "WKTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,9 +22,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    WKNavigationViewController *nav = [[WKNavigationViewController alloc] initWithRootViewController:[[ChatViewController alloc] init]];
-    
-    self.window.rootViewController = nav;
+
+    self.window.rootViewController = [[WKTabBarViewController alloc] init];
     
     [self.window makeKeyAndVisible];
     return YES;
