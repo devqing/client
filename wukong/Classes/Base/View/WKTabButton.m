@@ -18,9 +18,9 @@
     if (self) {
         self.imageView.contentMode = UIViewContentModeCenter;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.font = [UIFont systemFontOfSize:12];
-        [self setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
-        [self setTitleColor:[UIColor orangeColor] forState:(UIControlStateSelected)];
+        self.titleLabel.font = [UIFont systemFontOfSize:10];
+        [self setTitleColor:UIColorFromRGB(UI_COLOR_TABBAR_TEXT) forState:(UIControlStateNormal)];
+        [self setTitleColor:UIColorFromRGB(UI_COLOR_TABBAR_TEXT_HL) forState:(UIControlStateSelected)];
     }
     return self;
 }
@@ -34,13 +34,13 @@
 {
     CGFloat imageW = self.frame.size.width;
     CGFloat imageH = self.frame.size.height * lwqImagePercent;
-    return  CGRectMake(0, 0, imageW, imageH);
+    return  CGRectMake(0, 2, imageW, imageH);
 }
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
 {
     CGFloat titleW = self.frame.size.width;
     CGFloat titleH = self.frame.size.height * (1 - lwqImagePercent);
-    return  CGRectMake(0, self.frame.size.height * lwqImagePercent, titleW, titleH);
+    return  CGRectMake(0, self.frame.size.height * lwqImagePercent+2, titleW, titleH-2);
 }
 @end

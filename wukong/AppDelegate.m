@@ -7,11 +7,17 @@
 //
 
 #import "AppDelegate.h"
-//#import <RongIMKit/RongIMKit.h>
-//#import <RongIMLib/RongIMLib.h>
+#import <RongIMKit/RongIMKit.h>
+#import <RongIMLib/RongIMLib.h>
 #import "WKTabBarViewController.h"
+#import "LoginViewController.h"
+#import "WKNavigationViewController.h"
+#import "WKAccountInfo.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) WKTabBarViewController *tabbarController;
+@property (nonatomic, strong) LoginViewController *loginViewController;
 
 @end
 
@@ -22,11 +28,57 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+    [[RCIM sharedRCIM] initWithAppKey:RONGYUN_APP_KEY];
+    
+    [self initNotification];
+    if ([[WKAccountInfo sharedInstance] isLoginToLocal]) {
 
-    self.window.rootViewController = [[WKTabBarViewController alloc] init];
+        RCUserInfo *_currentUserInfo =
+        [[RCUserInfo alloc] initWithUserId:[WKAccountInfo sharedInstance].uid
+                                      name:[WKAccountInfo sharedInstance].nikeName
+                                  portrait:nil];
+        [RCIMClient sharedRCIMClient].currentUserInfo = _currentUserInfo;
+        self.loginViewController = nil;
+        self.window.rootViewController = self.tabbarController;
+        [[RCIM sharedRCIM] connectWithToken:[WKAccountInfo sharedInstance].rongyunToken success:^(NSString *userId) {
+            NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
+            
+        } error:^(RCConnectErrorCode status) {
+            NSLog(@"登陆的错误码为:%d", status);
+        } tokenIncorrect:^{
+            
+            NSLog(@"token错误");
+        }];
+    }else
+    {
+        self.tabbarController = nil;
+        self.window.rootViewController = self.loginViewController;
+    }
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)initNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signupSuccuss) name:@"SIGNUP_SUCCUSS" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccuss) name:@"LOGIN_SUCCUSS" object:nil];
+}
+
+- (void)signupSuccuss
+{
+    
+    self.loginViewController = nil;
+    self.window.rootViewController = self.tabbarController;
+    [self.window makeKeyAndVisible];
+    
+}
+
+- (void)loginSuccuss
+{
+    self.loginViewController = nil;
+    self.window.rootViewController = self.tabbarController;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -49,6 +101,23 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark --getter&setter
+- (WKTabBarViewController *)tabbarController
+{
+    if (_tabbarController == nil) {
+        _tabbarController = [[WKTabBarViewController alloc] init];
+    }
+    return _tabbarController;
+}
+
+- (LoginViewController *)loginViewController
+{
+    if (_loginViewController == nil) {
+        _loginViewController = [[LoginViewController alloc] init];
+    }
+    return _loginViewController;
 }
 
 @end

@@ -11,7 +11,7 @@
 #import "AIFServiceShark.h"
 
 // shark
-NSString * const kAIFServiceShark = @"kAXServiceShark";
+NSString * const kAIFServiceShark = @"kAXServiceWK";
 
 
 @interface AIFServiceFactory()

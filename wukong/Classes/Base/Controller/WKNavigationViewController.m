@@ -16,43 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 + (void)initialize
 {
-    /**
-     *  设置导航栏的title
-     */
     UINavigationBar *bar = [UINavigationBar appearance];
     bar.tintColor = [UIColor whiteColor];
     
-//    [bar setTranslucent:YES];
+    UIImage *image = [UIImage imageNamed:@"background.png"];
     
-    //bar.backItem.title = @"333";
-//    [bar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:(UIBarMetricsDefault)];
+    NSInteger leftCapWidth = image.size.width * 0.5f;
+    NSInteger topCapHeight = image.size.height * 0.5f;
+
+    image = [image stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:topCapHeight];
     
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[UITextAttributeTextColor] = [UIColor whiteColor];
-    dict[UITextAttributeFont] = [UIFont systemFontOfSize:16];
-    
-    [bar setTitleTextAttributes:dict];
-    
-    /**
-     *  设置导航栏的按钮样式
-     */
-    UIBarButtonItem *item = [UIBarButtonItem  appearance];
-    NSMutableDictionary *dict1 = [NSMutableDictionary dictionary];
-    dict1[UITextAttributeTextColor] = [UIColor whiteColor];
-    dict1[UITextAttributeFont] = [UIFont systemFontOfSize:14];
-    //item.image.
-    
-    [item setTitleTextAttributes:dict1 forState:(UIControlStateNormal)];
-    
+    [bar setTranslucent:NO];
+    [bar setBackgroundImage:image forBarMetrics:(UIBarMetricsDefault)];
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (self.viewControllers.count>0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
 }
 
 @end

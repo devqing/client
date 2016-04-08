@@ -13,6 +13,9 @@
 #import "WKContactsViewController.h"
 #import "WKNavigationViewController.h"
 #import "WKTabbarView.h"
+#import <RongIMKit/RongIMKit.h>
+#import <RongIMLib/RongIMLib.h>
+#import "WKAccountInfo.h"
 
 @interface WKTabBarViewController ()<WKTabbarViewDelegate>
 
@@ -25,6 +28,8 @@
 #pragma mark --life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [self connectRC];
     
     [self.tabBar addSubview:self.tabView];
     [self setupViewControllers];
@@ -39,6 +44,24 @@
         }
     }
     
+}
+
+- (void)connectRC
+{
+    RCUserInfo *_currentUserInfo =
+    [[RCUserInfo alloc] initWithUserId:[WKAccountInfo sharedInstance].uid
+                                  name:[WKAccountInfo sharedInstance].nikeName
+                              portrait:nil];
+    [RCIMClient sharedRCIMClient].currentUserInfo = _currentUserInfo;
+    [[RCIM sharedRCIM] connectWithToken:[WKAccountInfo sharedInstance].rongyunToken success:^(NSString *userId) {
+        NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
+
+    } error:^(RCConnectErrorCode status) {
+        NSLog(@"登陆的错误码为:%d", status);
+    } tokenIncorrect:^{
+        
+        NSLog(@"token错误");
+    }];
 }
 
 #pragma mark --private method
@@ -67,7 +90,7 @@
     childVc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     
     [self addChildViewController:nav];
-
+    
     [self.tabView addsubviewWithItem:childVc.tabBarItem];
 }
 

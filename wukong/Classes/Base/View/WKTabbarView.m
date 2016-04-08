@@ -25,8 +25,7 @@
     [button setImage:item.image forState:UIControlStateNormal];
     [button setImage:item.selectedImage forState:UIControlStateSelected];
     [button setTitle:item.title forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
+
     [self addSubview:button];
     
     if (self.subviews.count == 1) {
