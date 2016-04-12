@@ -30,7 +30,7 @@
 
     image = [image stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:topCapHeight];
     
-    [bar setTranslucent:NO];
+    [bar setTranslucent:YES];
     [bar setBackgroundImage:image forBarMetrics:(UIBarMetricsDefault)];
 }
 

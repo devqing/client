@@ -14,6 +14,24 @@
 		88187B8C1CAEBDF500A2E7D6 /* WKFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B8A1CAEBDF500A2E7D6 /* WKFindViewController.m */; };
 		88187B901CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B8F1CAEBECE00A2E7D6 /* WKContactsViewController.m */; };
 		88187B911CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88187B8F1CAEBECE00A2E7D6 /* WKContactsViewController.m */; };
+		885788C21CBCBB3F0000661E /* WKSearchFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788C11CBCBB3F0000661E /* WKSearchFriendViewController.m */; };
+		885788C31CBCBB3F0000661E /* WKSearchFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788C11CBCBB3F0000661E /* WKSearchFriendViewController.m */; };
+		885788C61CBCC7A80000661E /* WKApiSearchFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788C51CBCC7A80000661E /* WKApiSearchFriendManager.m */; };
+		885788C71CBCC7A80000661E /* WKApiSearchFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788C51CBCC7A80000661E /* WKApiSearchFriendManager.m */; };
+		885788CA1CBCCB900000661E /* WKAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788C91CBCCB900000661E /* WKAddFriendViewController.m */; };
+		885788CB1CBCCB900000661E /* WKAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788C91CBCCB900000661E /* WKAddFriendViewController.m */; };
+		885788CE1CBCD0CE0000661E /* DefaultCompanyHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885788CD1CBCD0CE0000661E /* DefaultCompanyHead@2x.png */; };
+		885788CF1CBCD0CE0000661E /* DefaultCompanyHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885788CD1CBCD0CE0000661E /* DefaultCompanyHead@2x.png */; };
+		885788D11CBCD9A60000661E /* DefaultHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885788D01CBCD9A60000661E /* DefaultHead@2x.png */; };
+		885788D21CBCD9A60000661E /* DefaultHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885788D01CBCD9A60000661E /* DefaultHead@2x.png */; };
+		885788D41CBCDA0F0000661E /* fts_default_headimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885788D31CBCDA0F0000661E /* fts_default_headimage@2x.png */; };
+		885788D51CBCDA0F0000661E /* fts_default_headimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885788D31CBCDA0F0000661E /* fts_default_headimage@2x.png */; };
+		885788D81CBCDC570000661E /* SearchFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788D71CBCDC570000661E /* SearchFriendsCell.m */; };
+		885788D91CBCDC570000661E /* SearchFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788D71CBCDC570000661E /* SearchFriendsCell.m */; };
+		885788DC1CBCE1910000661E /* WKApiApplyFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788DB1CBCE1910000661E /* WKApiApplyFriendManager.m */; };
+		885788DD1CBCE1910000661E /* WKApiApplyFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788DB1CBCE1910000661E /* WKApiApplyFriendManager.m */; };
+		885788E01CBD050C0000661E /* RCDChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788DF1CBD050C0000661E /* RCDChatListCell.m */; };
+		885788E11CBD050C0000661E /* RCDChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788DF1CBD050C0000661E /* RCDChatListCell.m */; };
 		8874E5FF1CB502C400FCABE3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E5FE1CB502C400FCABE3 /* LoginViewController.m */; };
 		8874E6001CB502C400FCABE3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E5FE1CB502C400FCABE3 /* LoginViewController.m */; };
 		8874E6051CB505A900FCABE3 /* GreenBigBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8874E6021CB505A900FCABE3 /* GreenBigBtn@2x.png */; };
@@ -312,6 +330,21 @@
 		88187B8A1CAEBDF500A2E7D6 /* WKFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKFindViewController.m; sourceTree = "<group>"; };
 		88187B8E1CAEBECE00A2E7D6 /* WKContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKContactsViewController.h; sourceTree = "<group>"; };
 		88187B8F1CAEBECE00A2E7D6 /* WKContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKContactsViewController.m; sourceTree = "<group>"; };
+		885788C01CBCBB3F0000661E /* WKSearchFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKSearchFriendViewController.h; sourceTree = "<group>"; };
+		885788C11CBCBB3F0000661E /* WKSearchFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKSearchFriendViewController.m; sourceTree = "<group>"; };
+		885788C41CBCC7A80000661E /* WKApiSearchFriendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKApiSearchFriendManager.h; sourceTree = "<group>"; };
+		885788C51CBCC7A80000661E /* WKApiSearchFriendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKApiSearchFriendManager.m; sourceTree = "<group>"; };
+		885788C81CBCCB900000661E /* WKAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKAddFriendViewController.h; sourceTree = "<group>"; };
+		885788C91CBCCB900000661E /* WKAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAddFriendViewController.m; sourceTree = "<group>"; };
+		885788CD1CBCD0CE0000661E /* DefaultCompanyHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultCompanyHead@2x.png"; sourceTree = "<group>"; };
+		885788D01CBCD9A60000661E /* DefaultHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultHead@2x.png"; sourceTree = "<group>"; };
+		885788D31CBCDA0F0000661E /* fts_default_headimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fts_default_headimage@2x.png"; sourceTree = "<group>"; };
+		885788D61CBCDC570000661E /* SearchFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFriendsCell.h; sourceTree = "<group>"; };
+		885788D71CBCDC570000661E /* SearchFriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchFriendsCell.m; sourceTree = "<group>"; };
+		885788DA1CBCE1910000661E /* WKApiApplyFriendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKApiApplyFriendManager.h; sourceTree = "<group>"; };
+		885788DB1CBCE1910000661E /* WKApiApplyFriendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKApiApplyFriendManager.m; sourceTree = "<group>"; };
+		885788DE1CBD050C0000661E /* RCDChatListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDChatListCell.h; sourceTree = "<group>"; };
+		885788DF1CBD050C0000661E /* RCDChatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDChatListCell.m; sourceTree = "<group>"; };
 		8874E5FD1CB502C400FCABE3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8874E5FE1CB502C400FCABE3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8874E6021CB505A900FCABE3 /* GreenBigBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenBigBtn@2x.png"; sourceTree = "<group>"; };
@@ -350,7 +383,7 @@
 		8874E65E1CB79F1400FCABE3 /* WKAddBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAddBackView.m; sourceTree = "<group>"; };
 		8874E6611CB7A74200FCABE3 /* WKAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKAddCell.h; sourceTree = "<group>"; };
 		8874E6621CB7A74200FCABE3 /* WKAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAddCell.m; sourceTree = "<group>"; };
-		88A9B8801CAA835300B39268 /* wukong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wukong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A9B8801CAA835300B39268 /* wu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A9B8841CAA835300B39268 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A9B8861CAA835300B39268 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		88A9B8871CAA835300B39268 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -641,6 +674,16 @@
 			path = Contacts;
 			sourceTree = "<group>";
 		};
+		885788CC1CBCD0CE0000661E /* other */ = {
+			isa = PBXGroup;
+			children = (
+				885788D31CBCDA0F0000661E /* fts_default_headimage@2x.png */,
+				885788D01CBCD9A60000661E /* DefaultHead@2x.png */,
+				885788CD1CBCD0CE0000661E /* DefaultCompanyHead@2x.png */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
 		8874E5F91CB502B000FCABE3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -744,6 +787,10 @@
 				8874E61D1CB6351E00FCABE3 /* WKApiLoginManager.m */,
 				8874E6201CB6353300FCABE3 /* WKApiRegisterManager.h */,
 				8874E6211CB6353300FCABE3 /* WKApiRegisterManager.m */,
+				885788C41CBCC7A80000661E /* WKApiSearchFriendManager.h */,
+				885788C51CBCC7A80000661E /* WKApiSearchFriendManager.m */,
+				885788DA1CBCE1910000661E /* WKApiApplyFriendManager.h */,
+				885788DB1CBCE1910000661E /* WKApiApplyFriendManager.m */,
 			);
 			path = ApiManager;
 			sourceTree = "<group>";
@@ -771,6 +818,10 @@
 			children = (
 				8874E6531CB79A4600FCABE3 /* WKChatViewController.h */,
 				8874E6541CB79A4600FCABE3 /* WKChatViewController.m */,
+				885788C01CBCBB3F0000661E /* WKSearchFriendViewController.h */,
+				885788C11CBCBB3F0000661E /* WKSearchFriendViewController.m */,
+				885788C81CBCCB900000661E /* WKAddFriendViewController.h */,
+				885788C91CBCCB900000661E /* WKAddFriendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -785,12 +836,16 @@
 		8874E6561CB79A4700FCABE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				885788DE1CBD050C0000661E /* RCDChatListCell.h */,
+				885788DF1CBD050C0000661E /* RCDChatListCell.m */,
 				8874E6591CB79B9500FCABE3 /* WKChatAddView.h */,
 				8874E65A1CB79B9500FCABE3 /* WKChatAddView.m */,
 				8874E65D1CB79F1400FCABE3 /* WKAddBackView.h */,
 				8874E65E1CB79F1400FCABE3 /* WKAddBackView.m */,
 				8874E6611CB7A74200FCABE3 /* WKAddCell.h */,
 				8874E6621CB7A74200FCABE3 /* WKAddCell.m */,
+				885788D61CBCDC570000661E /* SearchFriendsCell.h */,
+				885788D71CBCDC570000661E /* SearchFriendsCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -810,7 +865,7 @@
 		88A9B8811CAA835300B39268 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				88A9B8801CAA835300B39268 /* wukong.app */,
+				88A9B8801CAA835300B39268 /* wu.app */,
 				88EB1D871CABEA5B0016D2EF /* wukong-dis.app */,
 			);
 			name = Products;
@@ -1132,6 +1187,7 @@
 		88EB1EA31CACF20F0016D2EF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				885788CC1CBCD0CE0000661E /* other */,
 				8874E60F1CB6011500FCABE3 /* navi */,
 				8874E6011CB505A900FCABE3 /* button */,
 				88EB1EA41CACF20F0016D2EF /* tabbar */,
@@ -1235,7 +1291,7 @@
 			);
 			name = "wukong-dev";
 			productName = wukong;
-			productReference = 88A9B8801CAA835300B39268 /* wukong.app */;
+			productReference = 88A9B8801CAA835300B39268 /* wu.app */;
 			productType = "com.apple.product-type.application";
 		};
 		88EB1D631CABEA5B0016D2EF /* wukong-dis */ = {
@@ -1268,7 +1324,7 @@
 				TargetAttributes = {
 					88A9B87F1CAA835300B39268 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = X25E2DDC4Y;
+						DevelopmentTeam = 2M259QAYES;
 					};
 				};
 			};
@@ -1303,7 +1359,9 @@
 				8874E63C1CB7992800FCABE3 /* barbuttonicon_add@2x.png in Resources */,
 				8874E6441CB7992800FCABE3 /* contacts_add_money@2x.png in Resources */,
 				8874E6051CB505A900FCABE3 /* GreenBigBtn@2x.png in Resources */,
+				885788D41CBCDA0F0000661E /* fts_default_headimage@2x.png in Resources */,
 				88EB1ED01CACF21E0016D2EF /* tabbar_mainframeHL@2x.png in Resources */,
+				885788CE1CBCD0CE0000661E /* DefaultCompanyHead@2x.png in Resources */,
 				88EB1EC01CACF21E0016D2EF /* tabbar_contactsHL@2x.png in Resources */,
 				8874E64E1CB7992800FCABE3 /* MoreFunctionFrame@2x.png in Resources */,
 				88EB1EBC1CACF21E0016D2EF /* tabbar_contacts@2x.png in Resources */,
@@ -1333,6 +1391,7 @@
 				88EB1EDC1CACF21E0016D2EF /* tabbarBkg@2x.png in Resources */,
 				88EB1EC21CACF21E0016D2EF /* tabbar_contactsHL@3x.png in Resources */,
 				88CE0B841CAE3F7A002CDEA8 /* NavBar64@2x.png in Resources */,
+				885788D11CBCD9A60000661E /* DefaultHead@2x.png in Resources */,
 				88A9B8901CAA835300B39268 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1348,7 +1407,9 @@
 				8874E63D1CB7992800FCABE3 /* barbuttonicon_add@2x.png in Resources */,
 				8874E6451CB7992800FCABE3 /* contacts_add_money@2x.png in Resources */,
 				8874E6061CB505A900FCABE3 /* GreenBigBtn@2x.png in Resources */,
+				885788D51CBCDA0F0000661E /* fts_default_headimage@2x.png in Resources */,
 				88EB1ED11CACF21E0016D2EF /* tabbar_mainframeHL@2x.png in Resources */,
+				885788CF1CBCD0CE0000661E /* DefaultCompanyHead@2x.png in Resources */,
 				88EB1EC11CACF21E0016D2EF /* tabbar_contactsHL@2x.png in Resources */,
 				8874E64F1CB7992800FCABE3 /* MoreFunctionFrame@2x.png in Resources */,
 				88EB1EBD1CACF21E0016D2EF /* tabbar_contacts@2x.png in Resources */,
@@ -1378,6 +1439,7 @@
 				88EB1EDD1CACF21E0016D2EF /* tabbarBkg@2x.png in Resources */,
 				88EB1EC31CACF21E0016D2EF /* tabbar_contactsHL@3x.png in Resources */,
 				88CE0B851CAE3F7A002CDEA8 /* NavBar64@2x.png in Resources */,
+				885788D21CBCD9A60000661E /* DefaultHead@2x.png in Resources */,
 				88EB1D821CABEA5B0016D2EF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1462,8 +1524,10 @@
 				88EB1E541CABEEAB0016D2EF /* SharkApiGetOrderPrizeManager.m in Sources */,
 				88EB1E421CABEEAB0016D2EF /* SharkApiGetCityManager.m in Sources */,
 				88EB1E201CABEEAB0016D2EF /* AIFUDIDGenerator.m in Sources */,
+				885788C21CBCBB3F0000661E /* WKSearchFriendViewController.m in Sources */,
 				88EB1E4A1CABEEAB0016D2EF /* SharkApiGetGoodsTypesManager.m in Sources */,
 				88EB1E1C1CABEEAB0016D2EF /* AIFRequestGenerator.m in Sources */,
+				885788E01CBD050C0000661E /* RCDChatListCell.m in Sources */,
 				88EB1E5A1CABEEAB0016D2EF /* SharkApiGetProvinceManager.m in Sources */,
 				88187B901CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */,
 				88EB1E1E1CABEEAB0016D2EF /* AIFSignatureGenerator.m in Sources */,
@@ -1476,6 +1540,8 @@
 				88EB1E6A1CABEEAB0016D2EF /* SharkApiModifyAddressManager.m in Sources */,
 				88EB1E661CABEEAB0016D2EF /* SharkApiLoginOutManager.m in Sources */,
 				88EB1E961CABEEAB0016D2EF /* AIFLoggerConfiguration.m in Sources */,
+				885788CA1CBCCB900000661E /* WKAddFriendViewController.m in Sources */,
+				885788DC1CBCE1910000661E /* WKApiApplyFriendManager.m in Sources */,
 				8874E62C1CB6430D00FCABE3 /* WKTools.m in Sources */,
 				88EB1E3A1CABEEAB0016D2EF /* SharkApiGetAddressManager.m in Sources */,
 				88EB1E3C1CABEEAB0016D2EF /* SharkApiGetAreaInfoManager.m in Sources */,
@@ -1493,6 +1559,7 @@
 				88B9C8591CAEC59B00D6B8A2 /* WKTabButton.m in Sources */,
 				8874E6221CB6353300FCABE3 /* WKApiRegisterManager.m in Sources */,
 				8874E6151CB6087600FCABE3 /* UIViewController+navBar.m in Sources */,
+				885788D81CBCDC570000661E /* SearchFriendsCell.m in Sources */,
 				88EB1E581CABEEAB0016D2EF /* SharkApiGetPreorderSchedulesManager.m in Sources */,
 				88EB1E361CABEEAB0016D2EF /* SharkApiCreatAddressManager.m in Sources */,
 				88EB1E841CABEEAB0016D2EF /* SharkApiSubmitSuggestManager.m in Sources */,
@@ -1517,6 +1584,7 @@
 				8874E6571CB79A4700FCABE3 /* WKChatViewController.m in Sources */,
 				88EB1E861CABEEAB0016D2EF /* SharkApiUpdateOrderStatusManager.m in Sources */,
 				88EB1E281CABEEAB0016D2EF /* NSMutableString+AIFNetworkingMethods.m in Sources */,
+				885788C61CBCC7A80000661E /* WKApiSearchFriendManager.m in Sources */,
 				88EB1E8E1CABEEAB0016D2EF /* AIFCache.m in Sources */,
 				8874E6271CB63C1600FCABE3 /* WKAccountInfo.m in Sources */,
 				88EB1E741CABEEAB0016D2EF /* SharkApiResetPasswordManager.m in Sources */,
@@ -1555,8 +1623,10 @@
 				88EB1E551CABEEAB0016D2EF /* SharkApiGetOrderPrizeManager.m in Sources */,
 				88EB1E431CABEEAB0016D2EF /* SharkApiGetCityManager.m in Sources */,
 				88EB1E211CABEEAB0016D2EF /* AIFUDIDGenerator.m in Sources */,
+				885788C31CBCBB3F0000661E /* WKSearchFriendViewController.m in Sources */,
 				88EB1E4B1CABEEAB0016D2EF /* SharkApiGetGoodsTypesManager.m in Sources */,
 				88EB1E1D1CABEEAB0016D2EF /* AIFRequestGenerator.m in Sources */,
+				885788E11CBD050C0000661E /* RCDChatListCell.m in Sources */,
 				88EB1E5B1CABEEAB0016D2EF /* SharkApiGetProvinceManager.m in Sources */,
 				88187B911CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */,
 				88EB1E1F1CABEEAB0016D2EF /* AIFSignatureGenerator.m in Sources */,
@@ -1569,6 +1639,8 @@
 				88EB1E6B1CABEEAB0016D2EF /* SharkApiModifyAddressManager.m in Sources */,
 				88EB1E671CABEEAB0016D2EF /* SharkApiLoginOutManager.m in Sources */,
 				88EB1E971CABEEAB0016D2EF /* AIFLoggerConfiguration.m in Sources */,
+				885788CB1CBCCB900000661E /* WKAddFriendViewController.m in Sources */,
+				885788DD1CBCE1910000661E /* WKApiApplyFriendManager.m in Sources */,
 				8874E62D1CB6430D00FCABE3 /* WKTools.m in Sources */,
 				88EB1E3B1CABEEAB0016D2EF /* SharkApiGetAddressManager.m in Sources */,
 				88EB1E3D1CABEEAB0016D2EF /* SharkApiGetAreaInfoManager.m in Sources */,
@@ -1586,6 +1658,7 @@
 				88B9C85A1CAEC59B00D6B8A2 /* WKTabButton.m in Sources */,
 				8874E6231CB6353300FCABE3 /* WKApiRegisterManager.m in Sources */,
 				8874E6161CB6087600FCABE3 /* UIViewController+navBar.m in Sources */,
+				885788D91CBCDC570000661E /* SearchFriendsCell.m in Sources */,
 				88EB1E591CABEEAB0016D2EF /* SharkApiGetPreorderSchedulesManager.m in Sources */,
 				88EB1E371CABEEAB0016D2EF /* SharkApiCreatAddressManager.m in Sources */,
 				88EB1E851CABEEAB0016D2EF /* SharkApiSubmitSuggestManager.m in Sources */,
@@ -1610,6 +1683,7 @@
 				8874E6581CB79A4700FCABE3 /* WKChatViewController.m in Sources */,
 				88EB1E871CABEEAB0016D2EF /* SharkApiUpdateOrderStatusManager.m in Sources */,
 				88EB1E291CABEEAB0016D2EF /* NSMutableString+AIFNetworkingMethods.m in Sources */,
+				885788C71CBCC7A80000661E /* WKApiSearchFriendManager.m in Sources */,
 				88EB1E8F1CABEEAB0016D2EF /* AIFCache.m in Sources */,
 				8874E6281CB63C1600FCABE3 /* WKAccountInfo.m in Sources */,
 				88EB1E751CABEEAB0016D2EF /* SharkApiResetPasswordManager.m in Sources */,
@@ -1731,8 +1805,8 @@
 				INFOPLIST_FILE = "wukong-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RT.wukong;
-				PRODUCT_NAME = wukong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.client.wukong.liuweiqing;
+				PRODUCT_NAME = wu;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -1751,8 +1825,8 @@
 				INFOPLIST_FILE = "wukong-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RT.wukong;
-				PRODUCT_NAME = wukong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.client.wukong.liuweiqing;
+				PRODUCT_NAME = wu;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;

@@ -10,11 +10,13 @@
 #import "UIViewController+navBar.h"
 #import <RongIMKit/RongIMKit.h>
 #import "WKAddBackView.h"
+#import "WKSearchFriendViewController.h"
+#import "RCDChatListCell.h"
+#import <UIImageView+WebCache.h>
 
 #define kSCNavBarImageTag 10
 @interface WKChatViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *chatTableView;
 @property (nonatomic, strong) UIButton *addButton;
 @property (nonatomic, strong) WKAddBackView *addBackView;
 @property (nonatomic, assign) BOOL expand;
@@ -28,16 +30,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self setDisplayConversationTypes:@[@(ConversationType_PRIVATE),@(ConversationType_DISCUSSION), @(ConversationType_APPSERVICE), @(ConversationType_PUBLICSERVICE),@(ConversationType_GROUP),@(ConversationType_SYSTEM)]];
+    
+    //聚合会话类型
+    [self setCollectionConversationType:@[@(ConversationType_GROUP),@(ConversationType_DISCUSSION)]];
     [self setupRightItem];
     [self setnavigationWithTitle:@"微信"];
-    
-    [self.view addSubview:self.chatTableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self.conversationListTableView reloadData];
 }
 
 - (void)setupRightItem
@@ -45,80 +50,96 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.addButton];
 }
 
-#pragma mark --UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//#pragma mark --UITableViewDataSource
+
+//左滑删除
+-(void)rcConversationListTableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 15;
+    //可以从数据库删除数据
+    RCConversationModel *model = self.conversationListDataSource[indexPath.row];
+    [[RCIMClient sharedRCIMClient] removeConversation:ConversationType_SYSTEM targetId:model.targetId];
+    [self.conversationListDataSource removeObjectAtIndex:indexPath.row];
+    [self.conversationListTableView reloadData];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+
+-(CGFloat)rcConversationListTableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 1;
+    return 67.0f;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+-(NSMutableArray *)willReloadTableData:(NSMutableArray *)dataSource
 {
-    return 70;
+    for (int i=0; i<dataSource.count; i++) {
+        RCConversationModel *model = dataSource[i];
+        if(model.conversationType == ConversationType_SYSTEM && [model.lastestMessage isMemberOfClass:[RCContactNotificationMessage class]])
+        {
+            model.conversationModelType = RC_CONVERSATION_MODEL_TYPE_CUSTOMIZATION;
+        }
+    }
+    
+    return dataSource;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+-(RCConversationBaseCell *)rcConversationListTableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGFLOAT_MIN;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return CGFLOAT_MIN;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.textLabel.text = @"测试";
+    RCConversationModel *model = self.conversationListDataSource[indexPath.row];
+    
+    NSString *userName    = nil;
+    NSString *portraitUri = nil;
+    
+    
+    if(model.conversationType == ConversationType_SYSTEM && [model.lastestMessage isMemberOfClass:[RCContactNotificationMessage class]])
+    {
+        RCContactNotificationMessage *_contactNotificationMsg = (RCContactNotificationMessage *)model.lastestMessage;
+        
+        NSDictionary *_cache_userinfo = [[NSUserDefaults standardUserDefaults]objectForKey:_contactNotificationMsg.sourceUserId];
+        userName = _cache_userinfo[@"username"];
+        portraitUri = _cache_userinfo[@"portraitUri"];
+    }
+    
+    RCDChatListCell *cell = [[RCDChatListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
+    cell.lblDetail.text =[NSString stringWithFormat:@"来自%@的好友请求",userName];
+    [cell.ivAva sd_setImageWithURL:[NSURL URLWithString:portraitUri] placeholderImage:[UIImage imageNamed:@"system_notice"]];
+    //    cell.labelTime.text = [self ConvertMessageTime:model.sentTime / 1000];
+    cell.model = model;
     return cell;
 }
 
-#pragma mark --UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    RCConversationViewController *chat = [[RCConversationViewController alloc]init];
-    //设置会话的类型，如单聊、讨论组、群聊、聊天室、客服、公众服务会话等
-    chat.conversationType = ConversationType_PRIVATE;
-    //设置会话的目标会话ID。（单聊、客服、公众服务会话为对方的ID，讨论组、群聊、聊天室为会话的ID）
-    chat.targetId = @"570613076703c0427f3ac21d";
-    //设置聊天会话界面要显示的标题
-    chat.title = @"悟空";
-    //显示聊天会话界面
-    [self.navigationController pushViewController:chat animated:YES];
+    RCConversationViewController *_conversationVC = [[RCConversationViewController alloc]init];
+    _conversationVC.conversationType = model.conversationType;
+    _conversationVC.targetId = model.targetId;
+    _conversationVC.userName = model.conversationTitle;
+    _conversationVC.title = model.conversationTitle;
+    //            _conversationVC.conversation = model;
+    _conversationVC.unReadMessage = model.unreadMessageCount;
+    _conversationVC.enableNewComingMessageIcon=YES;//开启消息提醒
+    _conversationVC.enableUnreadMessageIcon=YES;
+    
+    [self.navigationController pushViewController:_conversationVC animated:YES];
 }
 
 #pragma mark --event response
 - (void)addButtonClick
 {
-    if (self.expand) {
-        self.expand = NO;
-        [self.addBackView removeFromSuperview];
-        
-    }else
-    {
-        self.expand = YES;
-        [self.view addSubview:self.addBackView];
-    }
+    //    if (self.expand) {
+    //        self.expand = NO;
+    //        [self.addBackView removeFromSuperview];
+    //        
+    //    }else
+    //    {
+    //        self.expand = YES;
+    //        [self.view addSubview:self.addBackView];
+    //    }
     
+    WKSearchFriendViewController *search = [[WKSearchFriendViewController alloc] init];
+    [self.navigationController pushViewController:search animated:YES];
 }
 
 #pragma mark --getter&setter
-- (UITableView *)chatTableView
-{
-    if (_chatTableView == nil) {
-        _chatTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, UI_SCREEN_HEIGHT-64) style:UITableViewStyleGrouped];
-        _chatTableView.delegate = self;
-        _chatTableView.dataSource = self;
-    }
-    return _chatTableView;
-}
 
 - (UIButton *)addButton
 {
