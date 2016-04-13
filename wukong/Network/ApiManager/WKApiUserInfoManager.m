@@ -1,14 +1,14 @@
 //
-//  WKApiApplyFriendManager.m
+//  WKApiUserInfoManager.m
 //  wukong
 //
-//  Created by liuweiqing on 16/4/12.
+//  Created by liuweiqing on 16/4/13.
 //  Copyright © 2016年 RT. All rights reserved.
 //
 
-#import "WKApiApplyFriendManager.h"
+#import "WKApiUserInfoManager.h"
 
-@implementation WKApiApplyFriendManager
+@implementation WKApiUserInfoManager
 
 - (instancetype)init
 {
@@ -21,7 +21,7 @@
 
 - (NSString *)methodName
 {
-    return @"api.apply.friend";
+    return @"api.userinfo";
 }
 
 - (NSString *)serviceType
@@ -31,7 +31,7 @@
 
 - (RTAPIManagerRequestType)requestType
 {
-    return RTAPIManagerRequestTypePost;
+    return RTAPIManagerRequestTypeGet;
 }
 
 

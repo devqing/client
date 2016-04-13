@@ -18,6 +18,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
 
 @end

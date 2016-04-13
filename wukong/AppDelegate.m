@@ -32,23 +32,8 @@
     
     [self initNotification];
     if ([[WKAccountInfo sharedInstance] isLoginToLocal]) {
-
-        RCUserInfo *_currentUserInfo =
-        [[RCUserInfo alloc] initWithUserId:[WKAccountInfo sharedInstance].uid
-                                      name:[WKAccountInfo sharedInstance].nikeName
-                                  portrait:nil];
-        [RCIMClient sharedRCIMClient].currentUserInfo = _currentUserInfo;
         self.loginViewController = nil;
         self.window.rootViewController = self.tabbarController;
-        [[RCIM sharedRCIM] connectWithToken:[WKAccountInfo sharedInstance].rongyunToken success:^(NSString *userId) {
-            NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
-            
-        } error:^(RCConnectErrorCode status) {
-            NSLog(@"登陆的错误码为:%d", status);
-        } tokenIncorrect:^{
-            
-            NSLog(@"token错误");
-        }];
     }else
     {
         self.tabbarController = nil;
@@ -67,7 +52,11 @@
 
 - (void)signupSuccuss
 {
-    
+    RCUserInfo *_currentUserInfo =
+    [[RCUserInfo alloc] initWithUserId:[WKAccountInfo sharedInstance].uid
+                                  name:[WKAccountInfo sharedInstance].nikeName
+                              portrait:nil];
+    [RCIMClient sharedRCIMClient].currentUserInfo = _currentUserInfo;
     self.loginViewController = nil;
     self.window.rootViewController = self.tabbarController;
     [self.window makeKeyAndVisible];
@@ -76,6 +65,11 @@
 
 - (void)loginSuccuss
 {
+    RCUserInfo *_currentUserInfo =
+    [[RCUserInfo alloc] initWithUserId:[WKAccountInfo sharedInstance].uid
+                                  name:[WKAccountInfo sharedInstance].nikeName
+                              portrait:nil];
+    [RCIMClient sharedRCIMClient].currentUserInfo = _currentUserInfo;
     self.loginViewController = nil;
     self.window.rootViewController = self.tabbarController;
     [self.window makeKeyAndVisible];

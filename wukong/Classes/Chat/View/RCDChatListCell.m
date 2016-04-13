@@ -12,13 +12,6 @@
 
 @implementation RCDChatListCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -34,7 +27,7 @@
             _ivAva.layer.cornerRadius=[[RCIM sharedRCIM]globalConversationPortraitSize].height/2;
         }
         
-        [_ivAva setBackgroundColor:[UIColor blackColor]];
+//        [_ivAva setBackgroundColor:[UIColor blackColor]];
         
         _lblDetail = [UILabel new];
         [_lblDetail setFont:[UIFont systemFontOfSize:14.f]];

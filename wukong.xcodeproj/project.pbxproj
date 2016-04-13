@@ -32,6 +32,12 @@
 		885788DD1CBCE1910000661E /* WKApiApplyFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788DB1CBCE1910000661E /* WKApiApplyFriendManager.m */; };
 		885788E01CBD050C0000661E /* RCDChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788DF1CBD050C0000661E /* RCDChatListCell.m */; };
 		885788E11CBD050C0000661E /* RCDChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788DF1CBD050C0000661E /* RCDChatListCell.m */; };
+		885788E41CBDE2F60000661E /* WKFriendInvitationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788E31CBDE2F60000661E /* WKFriendInvitationTableViewController.m */; };
+		885788E51CBDE2F60000661E /* WKFriendInvitationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788E31CBDE2F60000661E /* WKFriendInvitationTableViewController.m */; };
+		885788E81CBDE4270000661E /* WKChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788E71CBDE4270000661E /* WKChatViewController.m */; };
+		885788E91CBDE4270000661E /* WKChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788E71CBDE4270000661E /* WKChatViewController.m */; };
+		885788EC1CBDE5440000661E /* WKFriendInviteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788EB1CBDE5440000661E /* WKFriendInviteViewCell.m */; };
+		885788ED1CBDE5440000661E /* WKFriendInviteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885788EB1CBDE5440000661E /* WKFriendInviteViewCell.m */; };
 		8874E5FF1CB502C400FCABE3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E5FE1CB502C400FCABE3 /* LoginViewController.m */; };
 		8874E6001CB502C400FCABE3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E5FE1CB502C400FCABE3 /* LoginViewController.m */; };
 		8874E6051CB505A900FCABE3 /* GreenBigBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8874E6021CB505A900FCABE3 /* GreenBigBtn@2x.png */; };
@@ -78,14 +84,18 @@
 		8874E64F1CB7992800FCABE3 /* MoreFunctionFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8874E6381CB7992800FCABE3 /* MoreFunctionFrame@2x.png */; };
 		8874E6501CB7992800FCABE3 /* MoreFunctionFrame@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8874E6391CB7992800FCABE3 /* MoreFunctionFrame@3x.png */; };
 		8874E6511CB7992800FCABE3 /* MoreFunctionFrame@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8874E6391CB7992800FCABE3 /* MoreFunctionFrame@3x.png */; };
-		8874E6571CB79A4700FCABE3 /* WKChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E6541CB79A4600FCABE3 /* WKChatViewController.m */; };
-		8874E6581CB79A4700FCABE3 /* WKChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E6541CB79A4600FCABE3 /* WKChatViewController.m */; };
+		8874E6571CB79A4700FCABE3 /* WKChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E6541CB79A4600FCABE3 /* WKChatListViewController.m */; };
+		8874E6581CB79A4700FCABE3 /* WKChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E6541CB79A4600FCABE3 /* WKChatListViewController.m */; };
 		8874E65B1CB79B9500FCABE3 /* WKChatAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E65A1CB79B9500FCABE3 /* WKChatAddView.m */; };
 		8874E65C1CB79B9500FCABE3 /* WKChatAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E65A1CB79B9500FCABE3 /* WKChatAddView.m */; };
 		8874E65F1CB79F1400FCABE3 /* WKAddBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E65E1CB79F1400FCABE3 /* WKAddBackView.m */; };
 		8874E6601CB79F1400FCABE3 /* WKAddBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E65E1CB79F1400FCABE3 /* WKAddBackView.m */; };
 		8874E6631CB7A74200FCABE3 /* WKAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E6621CB7A74200FCABE3 /* WKAddCell.m */; };
 		8874E6641CB7A74200FCABE3 /* WKAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8874E6621CB7A74200FCABE3 /* WKAddCell.m */; };
+		889D7E0A1CBE344300D2776D /* WKApiUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D7E091CBE344300D2776D /* WKApiUserInfoManager.m */; };
+		889D7E0B1CBE344300D2776D /* WKApiUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D7E091CBE344300D2776D /* WKApiUserInfoManager.m */; };
+		889D7E0E1CBE41E600D2776D /* WKApiAcceptFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D7E0D1CBE41E600D2776D /* WKApiAcceptFriendManager.m */; };
+		889D7E0F1CBE41E600D2776D /* WKApiAcceptFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D7E0D1CBE41E600D2776D /* WKApiAcceptFriendManager.m */; };
 		88A9B8851CAA835300B39268 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A9B8841CAA835300B39268 /* main.m */; };
 		88A9B8881CAA835300B39268 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A9B8871CAA835300B39268 /* AppDelegate.m */; };
 		88A9B8901CAA835300B39268 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A9B88F1CAA835300B39268 /* Images.xcassets */; };
@@ -345,6 +355,12 @@
 		885788DB1CBCE1910000661E /* WKApiApplyFriendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKApiApplyFriendManager.m; sourceTree = "<group>"; };
 		885788DE1CBD050C0000661E /* RCDChatListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDChatListCell.h; sourceTree = "<group>"; };
 		885788DF1CBD050C0000661E /* RCDChatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDChatListCell.m; sourceTree = "<group>"; };
+		885788E21CBDE2F60000661E /* WKFriendInvitationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKFriendInvitationTableViewController.h; sourceTree = "<group>"; };
+		885788E31CBDE2F60000661E /* WKFriendInvitationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKFriendInvitationTableViewController.m; sourceTree = "<group>"; };
+		885788E61CBDE4270000661E /* WKChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKChatViewController.h; sourceTree = "<group>"; };
+		885788E71CBDE4270000661E /* WKChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKChatViewController.m; sourceTree = "<group>"; };
+		885788EA1CBDE5440000661E /* WKFriendInviteViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKFriendInviteViewCell.h; sourceTree = "<group>"; };
+		885788EB1CBDE5440000661E /* WKFriendInviteViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKFriendInviteViewCell.m; sourceTree = "<group>"; };
 		8874E5FD1CB502C400FCABE3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8874E5FE1CB502C400FCABE3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8874E6021CB505A900FCABE3 /* GreenBigBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenBigBtn@2x.png"; sourceTree = "<group>"; };
@@ -375,14 +391,18 @@
 		8874E6371CB7992800FCABE3 /* contacts_add_scan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts_add_scan@3x.png"; sourceTree = "<group>"; };
 		8874E6381CB7992800FCABE3 /* MoreFunctionFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreFunctionFrame@2x.png"; sourceTree = "<group>"; };
 		8874E6391CB7992800FCABE3 /* MoreFunctionFrame@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreFunctionFrame@3x.png"; sourceTree = "<group>"; };
-		8874E6531CB79A4600FCABE3 /* WKChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKChatViewController.h; sourceTree = "<group>"; };
-		8874E6541CB79A4600FCABE3 /* WKChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKChatViewController.m; sourceTree = "<group>"; };
+		8874E6531CB79A4600FCABE3 /* WKChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKChatListViewController.h; sourceTree = "<group>"; };
+		8874E6541CB79A4600FCABE3 /* WKChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKChatListViewController.m; sourceTree = "<group>"; };
 		8874E6591CB79B9500FCABE3 /* WKChatAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKChatAddView.h; sourceTree = "<group>"; };
 		8874E65A1CB79B9500FCABE3 /* WKChatAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKChatAddView.m; sourceTree = "<group>"; };
 		8874E65D1CB79F1400FCABE3 /* WKAddBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKAddBackView.h; sourceTree = "<group>"; };
 		8874E65E1CB79F1400FCABE3 /* WKAddBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAddBackView.m; sourceTree = "<group>"; };
 		8874E6611CB7A74200FCABE3 /* WKAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKAddCell.h; sourceTree = "<group>"; };
 		8874E6621CB7A74200FCABE3 /* WKAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAddCell.m; sourceTree = "<group>"; };
+		889D7E081CBE344300D2776D /* WKApiUserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKApiUserInfoManager.h; sourceTree = "<group>"; };
+		889D7E091CBE344300D2776D /* WKApiUserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKApiUserInfoManager.m; sourceTree = "<group>"; };
+		889D7E0C1CBE41E600D2776D /* WKApiAcceptFriendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKApiAcceptFriendManager.h; sourceTree = "<group>"; };
+		889D7E0D1CBE41E600D2776D /* WKApiAcceptFriendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKApiAcceptFriendManager.m; sourceTree = "<group>"; };
 		88A9B8801CAA835300B39268 /* wu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A9B8841CAA835300B39268 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A9B8861CAA835300B39268 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -791,6 +811,10 @@
 				885788C51CBCC7A80000661E /* WKApiSearchFriendManager.m */,
 				885788DA1CBCE1910000661E /* WKApiApplyFriendManager.h */,
 				885788DB1CBCE1910000661E /* WKApiApplyFriendManager.m */,
+				889D7E081CBE344300D2776D /* WKApiUserInfoManager.h */,
+				889D7E091CBE344300D2776D /* WKApiUserInfoManager.m */,
+				889D7E0C1CBE41E600D2776D /* WKApiAcceptFriendManager.h */,
+				889D7E0D1CBE41E600D2776D /* WKApiAcceptFriendManager.m */,
 			);
 			path = ApiManager;
 			sourceTree = "<group>";
@@ -816,12 +840,16 @@
 		8874E6521CB79A4600FCABE3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8874E6531CB79A4600FCABE3 /* WKChatViewController.h */,
-				8874E6541CB79A4600FCABE3 /* WKChatViewController.m */,
+				8874E6531CB79A4600FCABE3 /* WKChatListViewController.h */,
+				8874E6541CB79A4600FCABE3 /* WKChatListViewController.m */,
 				885788C01CBCBB3F0000661E /* WKSearchFriendViewController.h */,
 				885788C11CBCBB3F0000661E /* WKSearchFriendViewController.m */,
 				885788C81CBCCB900000661E /* WKAddFriendViewController.h */,
 				885788C91CBCCB900000661E /* WKAddFriendViewController.m */,
+				885788E21CBDE2F60000661E /* WKFriendInvitationTableViewController.h */,
+				885788E31CBDE2F60000661E /* WKFriendInvitationTableViewController.m */,
+				885788E61CBDE4270000661E /* WKChatViewController.h */,
+				885788E71CBDE4270000661E /* WKChatViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -846,6 +874,8 @@
 				8874E6621CB7A74200FCABE3 /* WKAddCell.m */,
 				885788D61CBCDC570000661E /* SearchFriendsCell.h */,
 				885788D71CBCDC570000661E /* SearchFriendsCell.m */,
+				885788EA1CBDE5440000661E /* WKFriendInviteViewCell.h */,
+				885788EB1CBDE5440000661E /* WKFriendInviteViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1532,6 +1562,7 @@
 				88187B901CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */,
 				88EB1E1E1CABEEAB0016D2EF /* AIFSignatureGenerator.m in Sources */,
 				88EB1E441CABEEAB0016D2EF /* SharkApiGetcountyManager.m in Sources */,
+				885788E81CBDE4270000661E /* WKChatViewController.m in Sources */,
 				88EB1E2E1CABEEAB0016D2EF /* NSURLRequest+AIFNetworkingMethods.m in Sources */,
 				88EB1E5E1CABEEAB0016D2EF /* SharkApiGetShopInfoManager.m in Sources */,
 				88EB1E7E1CABEEAB0016D2EF /* SharkApiSignUpSMSManager.m in Sources */,
@@ -1540,6 +1571,7 @@
 				88EB1E6A1CABEEAB0016D2EF /* SharkApiModifyAddressManager.m in Sources */,
 				88EB1E661CABEEAB0016D2EF /* SharkApiLoginOutManager.m in Sources */,
 				88EB1E961CABEEAB0016D2EF /* AIFLoggerConfiguration.m in Sources */,
+				885788E41CBDE2F60000661E /* WKFriendInvitationTableViewController.m in Sources */,
 				885788CA1CBCCB900000661E /* WKAddFriendViewController.m in Sources */,
 				885788DC1CBCE1910000661E /* WKApiApplyFriendManager.m in Sources */,
 				8874E62C1CB6430D00FCABE3 /* WKTools.m in Sources */,
@@ -1557,11 +1589,13 @@
 				88EB1E901CABEEAB0016D2EF /* AIFCacheObject.m in Sources */,
 				88EB1E601CABEEAB0016D2EF /* SharkApiGetShopListManager.m in Sources */,
 				88B9C8591CAEC59B00D6B8A2 /* WKTabButton.m in Sources */,
+				885788EC1CBDE5440000661E /* WKFriendInviteViewCell.m in Sources */,
 				8874E6221CB6353300FCABE3 /* WKApiRegisterManager.m in Sources */,
 				8874E6151CB6087600FCABE3 /* UIViewController+navBar.m in Sources */,
 				885788D81CBCDC570000661E /* SearchFriendsCell.m in Sources */,
 				88EB1E581CABEEAB0016D2EF /* SharkApiGetPreorderSchedulesManager.m in Sources */,
 				88EB1E361CABEEAB0016D2EF /* SharkApiCreatAddressManager.m in Sources */,
+				889D7E0A1CBE344300D2776D /* WKApiUserInfoManager.m in Sources */,
 				88EB1E841CABEEAB0016D2EF /* SharkApiSubmitSuggestManager.m in Sources */,
 				8874E65B1CB79B9500FCABE3 /* WKChatAddView.m in Sources */,
 				88187B871CAEBDE200A2E7D6 /* WKMineViewController.m in Sources */,
@@ -1581,7 +1615,7 @@
 				8874E5FF1CB502C400FCABE3 /* LoginViewController.m in Sources */,
 				88EB1E9C1CABEEAB0016D2EF /* AIFServiceShark.m in Sources */,
 				88EB1E801CABEEAB0016D2EF /* SharkApiSubmitOrderCommentManager.m in Sources */,
-				8874E6571CB79A4700FCABE3 /* WKChatViewController.m in Sources */,
+				8874E6571CB79A4700FCABE3 /* WKChatListViewController.m in Sources */,
 				88EB1E861CABEEAB0016D2EF /* SharkApiUpdateOrderStatusManager.m in Sources */,
 				88EB1E281CABEEAB0016D2EF /* NSMutableString+AIFNetworkingMethods.m in Sources */,
 				885788C61CBCC7A80000661E /* WKApiSearchFriendManager.m in Sources */,
@@ -1595,6 +1629,7 @@
 				88EB1E641CABEEAB0016D2EF /* SharkApiLoginManager.m in Sources */,
 				88EB1E981CABEEAB0016D2EF /* AIFService.m in Sources */,
 				88EB1E9A1CABEEAB0016D2EF /* AIFServiceFactory.m in Sources */,
+				889D7E0E1CBE41E600D2776D /* WKApiAcceptFriendManager.m in Sources */,
 				88A9B8851CAA835300B39268 /* main.m in Sources */,
 				8874E65F1CB79F1400FCABE3 /* WKAddBackView.m in Sources */,
 				88EB1E241CABEEAB0016D2EF /* NSArray+AIFNetworkingMethods.m in Sources */,
@@ -1631,6 +1666,7 @@
 				88187B911CAEBECE00A2E7D6 /* WKContactsViewController.m in Sources */,
 				88EB1E1F1CABEEAB0016D2EF /* AIFSignatureGenerator.m in Sources */,
 				88EB1E451CABEEAB0016D2EF /* SharkApiGetcountyManager.m in Sources */,
+				885788E91CBDE4270000661E /* WKChatViewController.m in Sources */,
 				88EB1E2F1CABEEAB0016D2EF /* NSURLRequest+AIFNetworkingMethods.m in Sources */,
 				88EB1E5F1CABEEAB0016D2EF /* SharkApiGetShopInfoManager.m in Sources */,
 				88EB1E7F1CABEEAB0016D2EF /* SharkApiSignUpSMSManager.m in Sources */,
@@ -1639,6 +1675,7 @@
 				88EB1E6B1CABEEAB0016D2EF /* SharkApiModifyAddressManager.m in Sources */,
 				88EB1E671CABEEAB0016D2EF /* SharkApiLoginOutManager.m in Sources */,
 				88EB1E971CABEEAB0016D2EF /* AIFLoggerConfiguration.m in Sources */,
+				885788E51CBDE2F60000661E /* WKFriendInvitationTableViewController.m in Sources */,
 				885788CB1CBCCB900000661E /* WKAddFriendViewController.m in Sources */,
 				885788DD1CBCE1910000661E /* WKApiApplyFriendManager.m in Sources */,
 				8874E62D1CB6430D00FCABE3 /* WKTools.m in Sources */,
@@ -1656,11 +1693,13 @@
 				88EB1E911CABEEAB0016D2EF /* AIFCacheObject.m in Sources */,
 				88EB1E611CABEEAB0016D2EF /* SharkApiGetShopListManager.m in Sources */,
 				88B9C85A1CAEC59B00D6B8A2 /* WKTabButton.m in Sources */,
+				885788ED1CBDE5440000661E /* WKFriendInviteViewCell.m in Sources */,
 				8874E6231CB6353300FCABE3 /* WKApiRegisterManager.m in Sources */,
 				8874E6161CB6087600FCABE3 /* UIViewController+navBar.m in Sources */,
 				885788D91CBCDC570000661E /* SearchFriendsCell.m in Sources */,
 				88EB1E591CABEEAB0016D2EF /* SharkApiGetPreorderSchedulesManager.m in Sources */,
 				88EB1E371CABEEAB0016D2EF /* SharkApiCreatAddressManager.m in Sources */,
+				889D7E0B1CBE344300D2776D /* WKApiUserInfoManager.m in Sources */,
 				88EB1E851CABEEAB0016D2EF /* SharkApiSubmitSuggestManager.m in Sources */,
 				8874E65C1CB79B9500FCABE3 /* WKChatAddView.m in Sources */,
 				88187B881CAEBDE200A2E7D6 /* WKMineViewController.m in Sources */,
@@ -1680,7 +1719,7 @@
 				8874E6001CB502C400FCABE3 /* LoginViewController.m in Sources */,
 				88EB1E9D1CABEEAB0016D2EF /* AIFServiceShark.m in Sources */,
 				88EB1E811CABEEAB0016D2EF /* SharkApiSubmitOrderCommentManager.m in Sources */,
-				8874E6581CB79A4700FCABE3 /* WKChatViewController.m in Sources */,
+				8874E6581CB79A4700FCABE3 /* WKChatListViewController.m in Sources */,
 				88EB1E871CABEEAB0016D2EF /* SharkApiUpdateOrderStatusManager.m in Sources */,
 				88EB1E291CABEEAB0016D2EF /* NSMutableString+AIFNetworkingMethods.m in Sources */,
 				885788C71CBCC7A80000661E /* WKApiSearchFriendManager.m in Sources */,
@@ -1694,6 +1733,7 @@
 				88EB1E651CABEEAB0016D2EF /* SharkApiLoginManager.m in Sources */,
 				88EB1E991CABEEAB0016D2EF /* AIFService.m in Sources */,
 				88EB1E9B1CABEEAB0016D2EF /* AIFServiceFactory.m in Sources */,
+				889D7E0F1CBE41E600D2776D /* WKApiAcceptFriendManager.m in Sources */,
 				88EB1D681CABEA5B0016D2EF /* main.m in Sources */,
 				8874E6601CB79F1400FCABE3 /* WKAddBackView.m in Sources */,
 				88EB1E251CABEEAB0016D2EF /* NSArray+AIFNetworkingMethods.m in Sources */,

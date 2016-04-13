@@ -32,6 +32,7 @@
     self.serverToken = account[@"server_token"];
     self.uid = account[@"_id"];
     self.nikeName = account[@"nike_name"];
+    self.avatar = account[@"avatar"];
     [[NSUserDefaults standardUserDefaults] setObject:account forKey:@"Account"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -58,6 +59,12 @@
 {
     NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
     return account[@"token"];
+}
+
+- (NSString *)avatar
+{
+    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
+    return account[@"avatar"];
 }
 
 - (BOOL)isLoginToLocal

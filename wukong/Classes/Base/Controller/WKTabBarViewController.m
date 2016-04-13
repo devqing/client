@@ -9,7 +9,7 @@
 #import "WKTabBarViewController.h"
 #import "WKMineViewController.h"
 #import "WKFindViewController.h"
-#import "WKChatViewController.h"
+#import "WKChatListViewController.h"
 #import "WKContactsViewController.h"
 #import "WKNavigationViewController.h"
 #import "WKTabbarView.h"
@@ -17,7 +17,7 @@
 #import <RongIMLib/RongIMLib.h>
 #import "WKAccountInfo.h"
 
-@interface WKTabBarViewController ()<WKTabbarViewDelegate>
+@interface WKTabBarViewController ()<WKTabbarViewDelegate,RCIMUserInfoDataSource>
 
 @property (nonatomic, strong) WKTabbarView *tabView;
 
@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self connectRC];
+    [self connectRC];
     
     [self.tabBar addSubview:self.tabView];
     [self setupViewControllers];
@@ -55,7 +55,7 @@
     [RCIMClient sharedRCIMClient].currentUserInfo = _currentUserInfo;
     [[RCIM sharedRCIM] connectWithToken:[WKAccountInfo sharedInstance].rongyunToken success:^(NSString *userId) {
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
-
+        [[RCIM sharedRCIM] setUserInfoDataSource:self];
     } error:^(RCConnectErrorCode status) {
         NSLog(@"登陆的错误码为:%d", status);
     } tokenIncorrect:^{
@@ -64,10 +64,20 @@
     }];
 }
 
+- (void)getUserInfoWithUserId:(NSString *)userId
+                   completion:(void (^)(RCUserInfo *userInfo))completion
+{
+    RCUserInfo *userInfo = [[RCUserInfo alloc] init];
+    userInfo.userId = [WKAccountInfo sharedInstance].uid;
+    userInfo.name = [WKAccountInfo sharedInstance].nikeName;
+    userInfo.portraitUri = [WKAccountInfo sharedInstance].avatar;
+    return completion(userInfo);
+}
+
 #pragma mark --private method
 - (void)setupViewControllers
 {
-    WKChatViewController *chat = [[WKChatViewController alloc] init];
+    WKChatListViewController *chat = [[WKChatListViewController alloc] init];
     [self addChildSubviews:chat title:@"微信" image:@"tabbar_mainframe" selectedImage:@"tabbar_mainframeHL"];
     
     WKContactsViewController *contacts = [[WKContactsViewController alloc] init];

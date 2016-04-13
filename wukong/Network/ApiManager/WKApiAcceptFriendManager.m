@@ -1,14 +1,14 @@
 //
-//  WKApiApplyFriendManager.m
+//  WKApiAcceptFriendManager.m
 //  wukong
 //
-//  Created by liuweiqing on 16/4/12.
+//  Created by liuweiqing on 16/4/13.
 //  Copyright © 2016年 RT. All rights reserved.
 //
 
-#import "WKApiApplyFriendManager.h"
+#import "WKApiAcceptFriendManager.h"
 
-@implementation WKApiApplyFriendManager
+@implementation WKApiAcceptFriendManager
 
 - (instancetype)init
 {
@@ -21,7 +21,7 @@
 
 - (NSString *)methodName
 {
-    return @"api.apply.friend";
+    return @"api.accept";
 }
 
 - (NSString *)serviceType

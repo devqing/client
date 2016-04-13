@@ -1,15 +1,19 @@
 //
-//  ChatViewController.h
+//  WKChatViewController.h
 //  wukong
 //
-//  Created by liuweiqing on 16/4/1.
+//  Created by liuweiqing on 16/4/13.
 //  Copyright © 2016年 RT. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <RongIMKit/RongIMKit.h>
-#import <RongIMLib/RongIMLib.h>
 
-@interface WKChatViewController : RCConversationListViewController
+@interface WKChatViewController : RCConversationViewController
+
+/**
+ *  会话数据模型
+ */
+@property (strong,nonatomic) RCConversationModel *conversation;
 
 @end

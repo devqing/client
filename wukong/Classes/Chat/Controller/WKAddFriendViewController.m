@@ -7,13 +7,17 @@
 //
 
 #import "WKAddFriendViewController.h"
+#import "WKApiApplyFriendManager.h"
+#import "WKAccountInfo.h"
+#import <UIImageView+WebCache.h>
 
-@interface WKAddFriendViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface WKAddFriendViewController ()<UITableViewDataSource,UITableViewDelegate,RTAPIManagerApiCallBackDelegate,RTAPIManagerParamSourceDelegate>
 
 @property (nonatomic, strong) UITableView *formTableView;
 
 @property (nonatomic, strong) UIButton *addButton;
 @property (nonatomic, strong) UIView *footerView;
+@property (nonatomic, strong) WKApiApplyFriendManager *apiManager;
 
 @end
 
@@ -47,12 +51,12 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     UIImageView *avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 60, 60)];
-    avatarImageView.image = [UIImage imageNamed:@"fts_default_headimage"];
+    [avatarImageView sd_setImageWithURL:[NSURL URLWithString:self.userInfo[@"avatar"]]];
     [cell addSubview:avatarImageView];
     UILabel *nikeNameLable = [[UILabel alloc] initWithFrame:CGRectMake(85, 15, UI_SCREEN_WIDTH-85-20, 20)];
     nikeNameLable.textColor = [UIColor blackColor];
     nikeNameLable.font = [UIFont systemFontOfSize:15];
-    nikeNameLable.text = @"王海明";
+    nikeNameLable.text = self.userInfo[@"nike_name"];
     [cell addSubview:nikeNameLable];
     return cell;
 }
@@ -67,10 +71,28 @@
     return 20;
 }
 
+#pragma mark --RTAPIManagerApiCallBackDelegate
+- (void)managerCallAPIDidFailed:(RTApiBaseManager *)manager
+{
+}
+- (void)managerCallAPIDidSuccess:(RTApiBaseManager *)manager
+{
+    NSLog(@"%@",[manager fetchDataWithReformer:nil]);
+}
+
+#pragma mark --RTAPIManagerParamSourceDelegate
+- (NSDictionary *)paramsForApi:(RTApiBaseManager *)manager
+{
+    return @{
+             @"from_id":[WKAccountInfo sharedInstance].uid,
+             @"to_id":self.userInfo[@"_id"]
+             };
+}
+
 #pragma mark --event response
 - (void)addButtonClick
 {
-    
+    [self.apiManager loadData];
 }
 
 
@@ -110,6 +132,16 @@
         [_footerView addSubview:self.addButton];
     }
     return _footerView;
+}
+
+- (WKApiApplyFriendManager *)apiManager
+{
+    if (_apiManager == nil) {
+        _apiManager = [[WKApiApplyFriendManager alloc] init];
+        _apiManager.delegate = self;
+        _apiManager.paramSource = self;
+    }
+    return _apiManager;
 }
 
 @end
