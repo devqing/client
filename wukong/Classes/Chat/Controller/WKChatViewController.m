@@ -7,6 +7,7 @@
 //
 
 #import "WKChatViewController.h"
+#import "UIViewController+navBar.h"
 
 @interface WKChatViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setnavigationWithTitle:self.title];
 }
 
 

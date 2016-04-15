@@ -124,7 +124,6 @@
         WKChatViewController *_conversationVC = [[WKChatViewController alloc] init];
         _conversationVC.conversationType = model.conversationType;
         _conversationVC.targetId = model.targetId;
-        _conversationVC.userName = model.conversationTitle;
         _conversationVC.title = model.conversationTitle;
         _conversationVC.conversation = model;
         _conversationVC.unReadMessage = model.unreadMessageCount;
@@ -135,14 +134,12 @@
         WKChatViewController *_conversationVC = [[WKChatViewController alloc]init];
         _conversationVC.conversationType = model.conversationType;
         _conversationVC.targetId = model.targetId;
-        _conversationVC.userName = model.conversationTitle;
         _conversationVC.title = model.conversationTitle;
         _conversationVC.conversation = model;
         _conversationVC.unReadMessage = model.unreadMessageCount;
         _conversationVC.enableNewComingMessageIcon=YES;//开启消息提醒
         _conversationVC.enableUnreadMessageIcon=YES;
         if (model.conversationType == ConversationType_SYSTEM) {
-            _conversationVC.userName = @"系统消息";
             _conversationVC.title = @"系统消息";
         }
         [self.navigationController pushViewController:_conversationVC animated:YES];

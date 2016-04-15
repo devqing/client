@@ -1,0 +1,13 @@
+//
+//  WKApiGetFriendsManager.h
+//  wukong
+//
+//  Created by liuweiqing on 16/4/15.
+//  Copyright © 2016年 RT. All rights reserved.
+//
+
+#import "RTApiBaseManager.h"
+
+@interface WKApiGetFriendsManager : RTApiBaseManager<RTAPIManagerValidator,RTAPIManager>
+
+@end

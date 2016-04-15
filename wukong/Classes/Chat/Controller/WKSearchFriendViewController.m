@@ -9,7 +9,7 @@
 #import "WKSearchFriendViewController.h"
 #import "WKApiSearchFriendManager.h"
 #import "WKAddFriendViewController.h"
-#import "SearchFriendsCell.h"
+#import "WKSearchFriendsCell.h"
 
 @interface WKSearchFriendViewController()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchControllerDelegate,UISearchResultsUpdating,RTAPIManagerApiCallBackDelegate,RTAPIManagerParamSourceDelegate>
 
@@ -52,7 +52,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.searchVc.active) {
-        SearchFriendsCell *cell = [[SearchFriendsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SearchFriendsCell"];
+        WKSearchFriendsCell *cell = [[WKSearchFriendsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SearchFriendsCell"];
         [cell configWithData:self.searchArray[indexPath.row]];
         return cell;
     }

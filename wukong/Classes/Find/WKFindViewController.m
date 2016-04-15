@@ -7,6 +7,7 @@
 //
 
 #import "WKFindViewController.h"
+#import "UIViewController+navBar.h"
 
 @interface WKFindViewController ()
 
@@ -14,9 +15,11 @@
 
 @implementation WKFindViewController
 
+#pragma mark --life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self setnavigationWithTitle:@"发现"];
 }
 
 

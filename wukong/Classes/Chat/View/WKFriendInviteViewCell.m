@@ -62,14 +62,14 @@
 - (UIImageView *)iconView
 {
     if (_iconView == nil) {
-        _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 40, 40)];
+        _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 7.5, 45, 45)];
     }
     return _iconView;
 }
 - (UILabel *)nameLabel
 {
     if (_nameLabel == nil) {
-        _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(55, 5, UI_SCREEN_WIDTH-55-20, 20)];
+        _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(65, 10, UI_SCREEN_WIDTH-55-20, 20)];
         _nameLabel.font = [UIFont systemFontOfSize:15];
         _nameLabel.textColor = [UIColor blackColor];
     }
@@ -79,7 +79,7 @@
 - (UILabel *)inviteLabel
 {
     if (_inviteLabel == nil) {
-        _inviteLabel = [[UILabel alloc] initWithFrame:CGRectMake(55, 30, UI_SCREEN_WIDTH-55-20, 16)];
+        _inviteLabel = [[UILabel alloc] initWithFrame:CGRectMake(65, 35, UI_SCREEN_WIDTH-55-20, 16)];
         _inviteLabel.textColor = [UIColor blackColor];
         _inviteLabel.font = [UIFont systemFontOfSize:12];
         _inviteLabel.text = @"申请添加您为好友";
@@ -90,7 +90,7 @@
 - (UIButton *)acceptButton
 {
     if (_acceptButton == nil) {
-        _acceptButton = [[UIButton alloc] initWithFrame:CGRectMake(UI_SCREEN_WIDTH-35-15, 12.5, 40, 25)];
+        _acceptButton = [[UIButton alloc] initWithFrame:CGRectMake(UI_SCREEN_WIDTH-35-15, 17.5, 40, 25)];
         _acceptButton.backgroundColor = UIColorFromRGB(UI_COLOR_TABBAR_TEXT_HL);
         [_acceptButton setTitle:@"接受" forState:UIControlStateNormal];
         _acceptButton.titleLabel.font = [UIFont systemFontOfSize:14];

@@ -16,6 +16,7 @@
 #import <RongIMKit/RongIMKit.h>
 #import <RongIMLib/RongIMLib.h>
 #import "WKAccountInfo.h"
+#import <AFNetworking.h>
 
 @interface WKTabBarViewController ()<WKTabbarViewDelegate,RCIMUserInfoDataSource>
 
@@ -64,14 +65,27 @@
     }];
 }
 
-- (void)getUserInfoWithUserId:(NSString *)userId
-                   completion:(void (^)(RCUserInfo *userInfo))completion
+- (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *userInfo))completion
 {
-    RCUserInfo *userInfo = [[RCUserInfo alloc] init];
-    userInfo.userId = [WKAccountInfo sharedInstance].uid;
-    userInfo.name = [WKAccountInfo sharedInstance].nikeName;
-    userInfo.portraitUri = [WKAccountInfo sharedInstance].avatar;
-    return completion(userInfo);
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *url = [NSString stringWithFormat:@"%@%@",SERVER_URL,@"api.userinfo"];
+    NSDictionary *params = @{
+                             @"uid":userId
+                             };
+    [manager GET:url parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSLog(@"%@",responseObject);
+        if ([responseObject[@"flag"] isEqualToString:@"ok"]) {
+            NSDictionary *response = responseObject[@"data"];
+            RCUserInfo *userInfo = [[RCUserInfo alloc] init];
+            userInfo.userId = response[@"_id"];
+            userInfo.name = response[@"nike_name"];
+            userInfo.portraitUri = response[@"avatar"];
+            return completion(userInfo);
+        }
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+    
 }
 
 #pragma mark --private method

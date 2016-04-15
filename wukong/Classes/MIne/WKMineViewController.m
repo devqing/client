@@ -7,6 +7,7 @@
 //
 
 #import "WKMineViewController.h"
+#import "UIViewController+navBar.h"
 
 @interface WKMineViewController ()
 
@@ -14,9 +15,11 @@
 
 @implementation WKMineViewController
 
+#pragma mark --life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self setnavigationWithTitle:@"我"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
