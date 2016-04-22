@@ -15,6 +15,9 @@
 @property (nonatomic, strong) NSString *serverToken;
 @property (nonatomic, strong) NSString *nikeName;
 @property (nonatomic, strong) NSString *avatar;
+@property (nonatomic, strong) NSString *sex;
+@property (nonatomic, strong) NSString *signature;
+@property (nonatomic, strong) NSString *uniqueName;
 
 + (WKAccountInfo *)sharedInstance;
 

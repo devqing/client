@@ -33,44 +33,55 @@
     self.uid = account[@"_id"];
     self.nikeName = account[@"nike_name"];
     self.avatar = account[@"avatar"];
+    self.sex = account[@"sex"];
+    self.signature = account[@"signature"];
+    self.uniqueName = account[@"unique_name"];
     [[NSUserDefaults standardUserDefaults] setObject:account forKey:@"Account"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (NSString *)uid
-{
-    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
-    return account[@"_id"];
-}
-
-- (NSString *)nikeName
-{
-    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
-    return account[@"nike_name"];
-}
-
-- (NSString *)serverToken
-{
-    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
-    return account[@"server_token"];
-}
-
-- (NSString *)rongyunToken
-{
-    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
-    return account[@"token"];
-}
-
-- (NSString *)avatar
-{
-    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
-    return account[@"avatar"];
-}
+//- (NSString *)uid
+//{
+//    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
+//    return account[@"_id"];
+//}
+//
+//- (NSString *)nikeName
+//{
+//    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
+//    return account[@"nike_name"];
+//}
+//
+//- (NSString *)serverToken
+//{
+//    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
+//    return account[@"server_token"];
+//}
+//
+//- (NSString *)rongyunToken
+//{
+//    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
+//    return account[@"token"];
+//}
+//
+//- (NSString *)avatar
+//{
+//    NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
+//    return account[@"avatar"];
+//}
 
 - (BOOL)isLoginToLocal
 {
     NSDictionary *account = [[NSUserDefaults standardUserDefaults] objectForKey:@"Account"];
     if (account) {
+        self.rongyunToken = account[@"token"];
+        self.serverToken = account[@"server_token"];
+        self.uid = account[@"_id"];
+        self.nikeName = account[@"nike_name"];
+        self.avatar = account[@"avatar"];
+        self.sex = account[@"sex"];
+        self.signature = account[@"signature"];
+        self.uniqueName = account[@"unique_name"];
         return YES;
     }
     return NO;

@@ -13,6 +13,7 @@
 #import "LoginViewController.h"
 #import "WKNavigationViewController.h"
 #import "WKAccountInfo.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -48,6 +49,13 @@
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signupSuccuss) name:@"SIGNUP_SUCCUSS" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccuss) name:@"LOGIN_SUCCUSS" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout) name:@"LOGOUT_SUCCUSS" object:nil];
+}
+
+- (void)logout
+{
+    self.tabbarController = nil;
+    self.window.rootViewController = self.loginViewController;
 }
 
 - (void)signupSuccuss
@@ -91,6 +99,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

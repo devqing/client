@@ -16,8 +16,8 @@
 #import "WKFriendInvitationTableViewController.h"
 #import "WKChatViewController.h"
 #import "WKApiUserInfoManager.h"
+#import <JGProgressHUD.h>
 
-#define kSCNavBarImageTag 10
 @interface WKChatListViewController ()<UITableViewDataSource,UITableViewDelegate,RTAPIManagerApiCallBackDelegate,RTAPIManagerParamSourceDelegate>
 
 @property (nonatomic, strong) UIButton *addButton;
@@ -110,7 +110,7 @@
     
     RCDChatListCell *cell = [[RCDChatListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
     cell.lblDetail.text =[NSString stringWithFormat:@"来自%@的好友请求",userName];
-//    cell.ivAva.image = [UIImage imageNamed:@"fts_default_headimage"];
+    //    cell.ivAva.image = [UIImage imageNamed:@"fts_default_headimage"];
     [cell.ivAva sd_setImageWithURL:[NSURL URLWithString:portraitUri] placeholderImage:[UIImage imageNamed:@"fts_default_headimage"]];
     //    cell.labelTime.text = [self ConvertMessageTime:model.sentTime / 1000];
     cell.model = model;
@@ -119,7 +119,10 @@
 
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath
 {
-    
+    //        JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    //        HUD.textLabel.text = @"正在上传";
+    //        HUD.indicatorView = [[JGProgressHUDSuccessIndicatorView alloc] init];
+    //        [HUD showInView:self.navigationController.view];
     if (model.conversationModelType == RC_CONVERSATION_MODEL_TYPE_PUBLIC_SERVICE) {
         WKChatViewController *_conversationVC = [[WKChatViewController alloc] init];
         _conversationVC.conversationType = model.conversationType;

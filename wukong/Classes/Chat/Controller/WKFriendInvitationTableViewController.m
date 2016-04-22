@@ -10,6 +10,9 @@
 #import "WKFriendInviteViewCell.h"
 #import "WKApiAcceptFriendManager.h"
 #import "WKAccountInfo.h"
+#import "NetworkErrorView.h"
+#import "PromptView.h"
+#import <MBProgressHUD.h>
 
 @interface WKFriendInvitationTableViewController ()<WKFriendInviteViewCellDelegate,RTAPIManagerApiCallBackDelegate,RTAPIManagerParamSourceDelegate>
 
@@ -46,12 +49,32 @@
 
 - (void)managerCallAPIDidFailed:(RTApiBaseManager *)manager
 {
-    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    if (manager.errorType == RTAPIManagerErrorTypeTimeout) {
+        // 请求超时
+        [NetworkErrorView showNetworkErrorWithTitle:@"请求超时" subTitle:@"请稍后重试"];
+    }else if (manager.errorType == RTAPIManagerErrorTypeNoNetWork){
+        [NetworkErrorView showNetworkErrorWithTitle:@"无网路连接" subTitle:@"请检查您的网络连接"];
+        // 无网络
+    }else if (manager.errorType == RTAPIManagerErrorTypeParamsError){
+        [NetworkErrorView showNetworkErrorWithTitle:@"请求参数错误" subTitle:@"请检查您的请求参数"];
+        // 请求参数错误
+    }else if (manager.errorType == RTAPIManagerErrorTypeNoContent){
+        // response错误
+        NSDictionary *reformerData = [manager fetchDataWithReformer:nil];
+        [PromptView showErrorWithTitle:reformerData[@"reason"]];
+    }else if (manager.errorType == RTAPIManagerErrorTypeDefault){
+        [NetworkErrorView showNetworkErrorWithTitle:@"请求错误" subTitle:@"请稍后重试"];
+    }
 }
 
 - (void)managerCallAPIDidSuccess:(RTApiBaseManager *)manager
 {
-    NSLog(@"%@",[manager fetchDataWithReformer:nil]);
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [PromptView showSuccessWithTitle:@"接受成功"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 
 #pragma mark --RTAPIManagerParamSourceDelegate
@@ -68,6 +91,7 @@
 - (void)friendInviteViewCell:(WKFriendInviteViewCell *)friendInviteViewCell didClickAcceptButton:(UIButton *)button sourceId:(NSString *)sourceId
 {
     self.sourceId = sourceId;
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.apiManager loadData];
 }
 
