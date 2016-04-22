@@ -7,6 +7,7 @@
 //
 
 #import "WKSearchFriendsCell.h"
+#import <UIImageView+WebCache.h>
 
 @interface WKSearchFriendsCell()
 
@@ -38,6 +39,7 @@
 {
     self.nameLabel.text = data[@"nike_name"];
     self.mobileLabel.text = [NSString stringWithFormat:@"手机号:%@",data[@"mobile"]] ;
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:data[@"avatar"]]];
 }
 
 #pragma mark --getter&setter
@@ -46,6 +48,11 @@
     if (_iconView == nil) {
         _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 55, 55)];
         _iconView.image = [UIImage imageNamed:@"fts_default_headimage"];
+        _iconView.layer.cornerRadius = 4.0;
+        _iconView.layer.masksToBounds = YES;
+        _iconView.layer.borderWidth = 0.5;
+        _iconView.layer.borderColor = [UIColor grayColor].CGColor;
+        _iconView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _iconView;
 }

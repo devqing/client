@@ -32,6 +32,9 @@
     
     [bar setTranslucent:YES];
     [bar setBackgroundImage:image forBarMetrics:(UIBarMetricsDefault)];
+    
+    
+
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated

@@ -69,9 +69,9 @@
 {
     NSLog(@"%@",info);
     self.avatarImage = [info objectForKey:UIImagePickerControllerEditedImage];
+    [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
     [self.uploadTokenManager loadData];
-    //    self.avatarImageView.image = img;
-    //    [picker dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -93,17 +93,17 @@
         QNUploadManager *upManager = [[QNUploadManager alloc] init];
         NSString *key = response[@"data"][@"key"];
         [upManager putData:UIImageJPEGRepresentation(self.avatarImage,0.05) key:key token:response[@"data"][@"token"] complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-            NSLog(@"%@",info);
-            NSLog(@"%@",resp);
-            NSLog(@"%@",key);
+            
             dispatch_async(dispatch_get_main_queue(), ^{
+                
                 if ([resp allKeys].count > 0) {
                     self.avatarKey = key;
+                    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                     [self.updateManager loadData];
                 }else
                 {
                     [PromptView showErrorWithTitle:@"上传失败，请重试"];
-                    [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
+                    
                 }
             });
             
@@ -111,8 +111,11 @@
         } option:nil];
     }else if (manager == self.updateManager)
     {
+        NSDictionary *response = [manager fetchDataWithReformer:nil];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        self.avatarImageView.image = self.avatarImage;
         [PromptView showSuccessWithTitle:@"上传成功"];
-        [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
+        [[WKAccountInfo sharedInstance] setAccount:response[@"data"]];
     }
 }
 
@@ -139,6 +142,7 @@
     if (_avatarImageView == nil) {
         _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, (UI_SCREEN_HEIGHT-UI_SCREEN_WIDTH)/2, UI_SCREEN_WIDTH, UI_SCREEN_WIDTH)];
         [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:[WKAccountInfo sharedInstance].avatar]];
+        _avatarImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _avatarImageView;
 }

@@ -40,6 +40,11 @@
 {
     if (_iconView == nil) {
         _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 60, 60)];
+        _iconView.layer.cornerRadius = 4.0;
+        _iconView.layer.masksToBounds = YES;
+        _iconView.layer.borderWidth = 0.5;
+        _iconView.layer.borderColor = [UIColor grayColor].CGColor;
+        _iconView.contentMode = UIViewContentModeScaleAspectFit;
         [_iconView sd_setImageWithURL:[NSURL URLWithString:[WKAccountInfo sharedInstance].avatar]];
     }
     return _iconView;

@@ -40,6 +40,11 @@
 {
     if (_iconView == nil) {
         _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 8, 34, 34)];
+        _iconView.layer.cornerRadius = 2.0;
+        _iconView.layer.masksToBounds = YES;
+        _iconView.layer.borderWidth = 0.5;
+        _iconView.layer.borderColor = [UIColor grayColor].CGColor;
+        _iconView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _iconView;
 }

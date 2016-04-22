@@ -53,6 +53,11 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     UIImageView *avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 60, 60)];
+    avatarImageView.layer.cornerRadius = 4.0;
+    avatarImageView.layer.masksToBounds = YES;
+    avatarImageView.layer.borderWidth = 0.5;
+    avatarImageView.layer.borderColor = [UIColor grayColor].CGColor;
+    avatarImageView.contentMode = UIViewContentModeScaleAspectFit;
     [avatarImageView sd_setImageWithURL:[NSURL URLWithString:self.userInfo[@"avatar"]]];
     [cell addSubview:avatarImageView];
     UILabel *nikeNameLable = [[UILabel alloc] initWithFrame:CGRectMake(85, 15, UI_SCREEN_WIDTH-85-20, 20)];

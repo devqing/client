@@ -34,6 +34,7 @@
 {
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self.formTableView reloadData];
 }
 
 
@@ -91,47 +92,12 @@
         [self.navigationController pushViewController:settingViewController animated:YES];
     }else if (indexPath.section == 0)
     {
-//        LCActionSheet *sheet = [[LCActionSheet alloc] initWithTitle:@"选择照片" buttonTitles:@[@"拍照",@"相册选择"] redButtonIndex:10 delegate:self];
-//        [sheet show];
         WKPersionalViewController *persionalViewController = [[WKPersionalViewController alloc] init];
         [self.navigationController pushViewController:persionalViewController animated:YES];
     }
 }
 
-#pragma mark --LCActionSheetDelegate
-- (void)actionSheet:(LCActionSheet *)actionSheet didClickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 0) {
-        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-        imagePicker.delegate = self;
-        imagePicker.allowsEditing = YES;
-        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [self presentViewController:imagePicker animated:YES completion:nil];
-    }else if(buttonIndex == 1)
-    {
-        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-        imagePicker.delegate = self;
-        imagePicker.allowsEditing = YES;
-        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self presentViewController:imagePicker animated:YES completion:nil];
-    }
-    
-}
 
-#pragma UIImagePickerController Delegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    NSLog(@"%@",info);
-    UIImage *img = [info objectForKey:UIImagePickerControllerEditedImage];
-    
-    
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
 
 #pragma mark --getter&setter
 - (UITableView *)formTableView

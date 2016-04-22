@@ -24,7 +24,7 @@ green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0])
 
 
-#define SERVER_URL @"http://120.25.194.185:1880/"
+#define SERVER_URL @"http://120.25.194.185/"
 #define API_VERSION @"0.1"
 
 #define UI_COLOR_TABBAR_TEXT_HL         0x1AB20A
@@ -32,7 +32,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0])
 #define UI_COLOR_BUTTON_ENABLE          0x1AB20A
 #define UI_COLOR_BUTTON_UNENABLE        0x1AB20A
 #define UI_COLOR_SEPRATOR_LINE          0xcbcbcb
-
+#define UI_COLOR_SAVE_NO_ENABLE         0x2c502c
+#define UI_COLOR_SAVE_ENABLE            0x1AB20A
 
 #define UI_SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define UI_SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
@@ -40,7 +41,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0])
 #define UI_BUTTON_WIDTH    (UI_SCREEN_WIDTH-40)
 #define UI_BUTTON_HEIGHT   44
 
-#define RONGYUN_APP_KEY @"8brlm7ufrnrx3"
+#define RONGYUN_APP_KEY @"0vnjpoadn9atz"
 
 #define IOS8_LATER [[UIDevice currentDevice].systemVersion floatValue] >= 8.0
 

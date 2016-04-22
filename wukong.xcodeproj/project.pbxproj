@@ -102,6 +102,10 @@
 		8896FC311CC7546900ADC732 /* barbuttonicon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8896FC2E1CC7546900ADC732 /* barbuttonicon_more@2x.png */; };
 		8896FC321CC7546900ADC732 /* barbuttonicon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8896FC2F1CC7546900ADC732 /* barbuttonicon_more@3x.png */; };
 		8896FC3D1CC898EA00ADC732 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8896FC3C1CC898EA00ADC732 /* ViewController.m */; };
+		889984381CCA195900E1DCAF /* setting_myQR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889984371CCA195900E1DCAF /* setting_myQR@2x.png */; };
+		8899843B1CCA1A3E00E1DCAF /* WKNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8899843A1CCA1A3E00E1DCAF /* WKNameViewController.m */; };
+		8899843E1CCA1A5C00E1DCAF /* WKSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8899843D1CCA1A5C00E1DCAF /* WKSexViewController.m */; };
+		889984411CCA1A7D00E1DCAF /* WKSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889984401CCA1A7D00E1DCAF /* WKSignatureViewController.m */; };
 		889D7E0A1CBE344300D2776D /* WKApiUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D7E091CBE344300D2776D /* WKApiUserInfoManager.m */; };
 		889D7E0B1CBE344300D2776D /* WKApiUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D7E091CBE344300D2776D /* WKApiUserInfoManager.m */; };
 		889D7E0E1CBE41E600D2776D /* WKApiAcceptFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D7E0D1CBE41E600D2776D /* WKApiAcceptFriendManager.m */; };
@@ -359,6 +363,13 @@
 		8896FC2F1CC7546900ADC732 /* barbuttonicon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barbuttonicon_more@3x.png"; sourceTree = "<group>"; };
 		8896FC3B1CC898EA00ADC732 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8896FC3C1CC898EA00ADC732 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		889984371CCA195900E1DCAF /* setting_myQR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_myQR@2x.png"; sourceTree = "<group>"; };
+		889984391CCA1A3E00E1DCAF /* WKNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKNameViewController.h; sourceTree = "<group>"; };
+		8899843A1CCA1A3E00E1DCAF /* WKNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKNameViewController.m; sourceTree = "<group>"; };
+		8899843C1CCA1A5C00E1DCAF /* WKSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKSexViewController.h; sourceTree = "<group>"; };
+		8899843D1CCA1A5C00E1DCAF /* WKSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKSexViewController.m; sourceTree = "<group>"; };
+		8899843F1CCA1A7D00E1DCAF /* WKSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKSignatureViewController.h; sourceTree = "<group>"; };
+		889984401CCA1A7D00E1DCAF /* WKSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKSignatureViewController.m; sourceTree = "<group>"; };
 		889D7E081CBE344300D2776D /* WKApiUserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKApiUserInfoManager.h; sourceTree = "<group>"; };
 		889D7E091CBE344300D2776D /* WKApiUserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKApiUserInfoManager.m; sourceTree = "<group>"; };
 		889D7E0C1CBE41E600D2776D /* WKApiAcceptFriendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKApiAcceptFriendManager.h; sourceTree = "<group>"; };
@@ -936,6 +947,12 @@
 				88E11CEF1CC4DE6E00820A2F /* WKPersionalViewController.m */,
 				8896FC2A1CC752DB00ADC732 /* WKAvatarViewController.h */,
 				8896FC2B1CC752DB00ADC732 /* WKAvatarViewController.m */,
+				889984391CCA1A3E00E1DCAF /* WKNameViewController.h */,
+				8899843A1CCA1A3E00E1DCAF /* WKNameViewController.m */,
+				8899843C1CCA1A5C00E1DCAF /* WKSexViewController.h */,
+				8899843D1CCA1A5C00E1DCAF /* WKSexViewController.m */,
+				8899843F1CCA1A7D00E1DCAF /* WKSignatureViewController.h */,
+				889984401CCA1A7D00E1DCAF /* WKSignatureViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -959,6 +976,7 @@
 		88E11CE01CC4C95400820A2F /* mine */ = {
 			isa = PBXGroup;
 			children = (
+				889984371CCA195900E1DCAF /* setting_myQR@2x.png */,
 				88E11CE11CC4C95E00820A2F /* MoreSetting@2x.png */,
 				88E11CE21CC4C95E00820A2F /* MoreSetting@3x.png */,
 			);
@@ -1293,6 +1311,7 @@
 				8874E6051CB505A900FCABE3 /* GreenBigBtn@2x.png in Resources */,
 				885788D41CBCDA0F0000661E /* fts_default_headimage@2x.png in Resources */,
 				88EB1ED01CACF21E0016D2EF /* tabbar_mainframeHL@2x.png in Resources */,
+				889984381CCA195900E1DCAF /* setting_myQR@2x.png in Resources */,
 				889D7E221CBF92A200D2776D /* wukong-dev.plist in Resources */,
 				885788CE1CBCD0CE0000661E /* DefaultCompanyHead@2x.png in Resources */,
 				88EB1EC01CACF21E0016D2EF /* tabbar_contactsHL@2x.png in Resources */,
@@ -1489,9 +1508,11 @@
 				8896FC291CC726AD00ADC732 /* NetworkErrorView.m in Sources */,
 				88EB1E901CABEEAB0016D2EF /* AIFCacheObject.m in Sources */,
 				88B9C8591CAEC59B00D6B8A2 /* WKTabButton.m in Sources */,
+				889984411CCA1A7D00E1DCAF /* WKSignatureViewController.m in Sources */,
 				885788EC1CBDE5440000661E /* WKFriendInviteViewCell.m in Sources */,
 				8874E6221CB6353300FCABE3 /* WKApiRegisterManager.m in Sources */,
 				8874E6151CB6087600FCABE3 /* UIViewController+navBar.m in Sources */,
+				8899843E1CCA1A5C00E1DCAF /* WKSexViewController.m in Sources */,
 				880DB47D1CC0FB2100099799 /* WKContactsViewController.m in Sources */,
 				885788D81CBCDC570000661E /* WKSearchFriendsCell.m in Sources */,
 				889D7E0A1CBE344300D2776D /* WKApiUserInfoManager.m in Sources */,
@@ -1507,6 +1528,7 @@
 				88EB1E9C1CABEEAB0016D2EF /* AIFServiceShark.m in Sources */,
 				8874E6571CB79A4700FCABE3 /* WKChatListViewController.m in Sources */,
 				880DB4761CC0FACF00099799 /* WKApiGetFriendsManager.m in Sources */,
+				8899843B1CCA1A3E00E1DCAF /* WKNameViewController.m in Sources */,
 				88EB1E281CABEEAB0016D2EF /* NSMutableString+AIFNetworkingMethods.m in Sources */,
 				885788C61CBCC7A80000661E /* WKApiSearchFriendManager.m in Sources */,
 				88EB1E8E1CABEEAB0016D2EF /* AIFCache.m in Sources */,
