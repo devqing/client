@@ -24,8 +24,10 @@
 @property (nonatomic, strong) WKAddBackView *addBackView;
 @property (nonatomic, assign) BOOL expand;
 @property (nonatomic, strong) WKApiUserInfoManager *apiManager;
+@property (nonatomic, strong) WKApiUserInfoManager *newApplyManager;
 @property (nonatomic, strong) NSString *sourceId;
 @property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) RCContactNotificationMessage *message;
 
 @end
 
@@ -49,6 +51,35 @@
 {
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+#pragma mark --new message
+-(void)didReceiveMessageNotification:(NSNotification *)notification
+{
+    //处理好友请求
+    RCMessage *message = notification.object;
+    if ([message.content isMemberOfClass:[RCContactNotificationMessage class]]) {
+        
+        if (message.conversationType != ConversationType_SYSTEM) {
+            NSLog(@"好友消息要发系统消息！！！");
+#if DEBUG
+            @throw  [[NSException alloc] initWithName:@"error" reason:@"好友消息要发系统消息！！！" userInfo:nil];
+#endif
+        }
+        RCContactNotificationMessage *_contactNotificationMsg = (RCContactNotificationMessage *)message.content;
+        self.message = _contactNotificationMsg;
+        if (_contactNotificationMsg.sourceUserId == nil || _contactNotificationMsg.sourceUserId .length ==0) {
+            return;
+        }
+        self.sourceId = _contactNotificationMsg.sourceUserId;
+        [self.newApplyManager loadData];
+        
+        
+    }else{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //调用父类刷新未读消息数
+            [super didReceiveMessageNotification:notification];
+        });
+    }
 }
 
 
@@ -110,7 +141,6 @@
     
     RCDChatListCell *cell = [[RCDChatListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
     cell.lblDetail.text =[NSString stringWithFormat:@"来自%@的好友请求",userName];
-    //    cell.ivAva.image = [UIImage imageNamed:@"fts_default_headimage"];
     [cell.ivAva sd_setImageWithURL:[NSURL URLWithString:portraitUri] placeholderImage:[UIImage imageNamed:@"fts_default_headimage"]];
     //    cell.labelTime.text = [self ConvertMessageTime:model.sentTime / 1000];
     cell.model = model;
@@ -119,10 +149,6 @@
 
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath
 {
-    //        JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
-    //        HUD.textLabel.text = @"正在上传";
-    //        HUD.indicatorView = [[JGProgressHUDSuccessIndicatorView alloc] init];
-    //        [HUD showInView:self.navigationController.view];
     if (model.conversationModelType == RC_CONVERSATION_MODEL_TYPE_PUBLIC_SERVICE) {
         WKChatViewController *_conversationVC = [[WKChatViewController alloc] init];
         _conversationVC.conversationType = model.conversationType;
@@ -172,12 +198,38 @@
 
 - (void)managerCallAPIDidSuccess:(RTApiBaseManager *)manager
 {
-    NSLog(@"%@",[manager fetchDataWithReformer:nil]);
-    NSDictionary *response = [manager fetchDataWithReformer:nil][@"data"];
-    [[NSUserDefaults standardUserDefaults] setObject:response forKey:self.sourceId];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self.conversationListTableView reloadRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (manager == self.apiManager) {
+        
+        NSLog(@"%@",[manager fetchDataWithReformer:nil]);
+        NSDictionary *response = [manager fetchDataWithReformer:nil][@"data"];
+        [[NSUserDefaults standardUserDefaults] setObject:response forKey:self.sourceId];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [self.conversationListTableView reloadRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }else if (manager == self.newApplyManager)
+    {
+        NSLog(@"%@",[manager fetchDataWithReformer:nil]);
+        NSDictionary *response = [manager fetchDataWithReformer:nil][@"data"];
+        [[NSUserDefaults standardUserDefaults] setObject:response forKey:self.sourceId];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
+        RCUserInfo *rcduserinfo_ = [RCUserInfo new];
+        rcduserinfo_.name = response[@"nike_name"];
+        rcduserinfo_.userId = response[@"_id"];
+        rcduserinfo_.portraitUri = response[@"avatar"];
+        
+        RCConversationModel *customModel = [RCConversationModel new];
+        customModel.conversationModelType = RC_CONVERSATION_MODEL_TYPE_CUSTOMIZATION;
+        customModel.extend = rcduserinfo_;
+        customModel.conversationType = ConversationType_SYSTEM;
+        customModel.senderUserId = self.sourceId;
+        customModel.lastestMessage = self.message;
+        
+        [self refreshConversationTableViewWithConversationModel:customModel];
+        //        [self notifyUpdateUnreadMessageCount];
+        [self refreshConversationTableViewIfNeeded];
+    }
 }
 
 #pragma mark --RTAPIManagerParamSourceDelegate
@@ -235,6 +287,16 @@
         _apiManager.paramSource = self;
     }
     return _apiManager;
+}
+
+- (WKApiUserInfoManager *)newApplyManager
+{
+    if (_newApplyManager == nil) {
+        _newApplyManager = [[WKApiUserInfoManager alloc] init];
+        _newApplyManager.delegate = self;
+        _newApplyManager.paramSource = self;
+    }
+    return _newApplyManager;
 }
 
 @end

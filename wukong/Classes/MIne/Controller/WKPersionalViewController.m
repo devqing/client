@@ -13,6 +13,7 @@
 #import "WKAvatarViewController.h"
 #import "WKNameViewController.h"
 #import "WKSignatureViewController.h"
+#import "WKSexViewController.h"
 
 @interface WKPersionalViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -116,7 +117,10 @@
         {
             cell.textLabel.text = @"个性签名";
             [cell addSubview:self.signatureLabel];
-            self.signatureLabel.text = [WKAccountInfo sharedInstance].signature;
+            if ([WKAccountInfo sharedInstance].signature.length > 0) {
+                self.signatureLabel.text = [WKAccountInfo sharedInstance].signature;
+            }else
+                self.signatureLabel.text = @"未填写";
         }
     }
     return cell;
@@ -140,6 +144,10 @@
         if (indexPath.row == 1) {
             WKSignatureViewController *signatureViewController = [[WKSignatureViewController alloc] init];
             [self.navigationController pushViewController:signatureViewController animated:YES];
+        }else if (indexPath.row == 0)
+        {
+            WKSexViewController *sexViewController = [[WKSexViewController alloc] init];
+            [self.navigationController pushViewController:sexViewController animated:YES];
         }
     }
 }

@@ -13,7 +13,6 @@
 #import "LoginViewController.h"
 #import "WKNavigationViewController.h"
 #import "WKAccountInfo.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
